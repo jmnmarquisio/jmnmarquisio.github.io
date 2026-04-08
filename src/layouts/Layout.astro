@@ -1,0 +1,98 @@
+---
+import { ViewTransitions } from "astro:transitions";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Javier Rodríguez Viñas — Frontend Engineer & Designer",
+  description = "Lead Frontend Engineer & UX Specialist bridging design and code. Expert in React, Next.js, TypeScript, and Design Systems.",
+} = Astro.props;
+
+import Navigation from "../components/Navigation.tsx";
+import ThemeToggle from "../components/ThemeToggle.tsx";
+import SpotifyNowPlaying from "../components/SpotifyNowPlaying.tsx";
+import Analytics from "@vercel/analytics/astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Canonical URL -->
+    <link
+      rel="canonical"
+      href={new URL(Astro.url.pathname, Astro.site ?? Astro.url)}
+    />
+
+    <!-- SEO Meta -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Javier Rodríguez Viñas" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="google" content="translate" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content={new URL(Astro.url.pathname, Astro.site ?? Astro.url)}
+    />
+    <meta property="og:locale" content="en_US" />
+    <!-- <meta property="og:image" content={new URL("/og-image.jpg", Astro.site)} /> -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <!-- <meta name="twitter:image" content={new URL("/og-image.jpg", Astro.site)} /> -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- View Transitions -->
+    <ViewTransitions />
+
+    <!-- Dark mode script (runs before paint to prevent flash) -->
+    <script is:inline>
+      const theme =
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+
+    <!-- Global Styles -->
+    <style is:global>
+      @import "../styles/global.css";
+    </style>
+  </head>
+  <body class="min-h-screen relative">
+    <ThemeToggle client:load />
+
+    <Navigation client:load />
+
+    <SpotifyNowPlaying client:idle />
+
+    <slot />
+    <Analytics />
+  </body>
+</html>

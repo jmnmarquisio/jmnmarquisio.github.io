@@ -1,0 +1,161 @@
+---
+import {
+  skillCategories,
+  education,
+  languages,
+  certifications,
+  interests,
+} from "../../data/content";
+import SkillBadge from "../ui/SkillBadge.astro";
+import SectionHeader from "../ui/SectionHeader.astro";
+import Education from "../icons/Education.astro";
+import Globe from "../icons/Globe.astro";
+import Star from "../icons/Star.astro";
+---
+
+<section id="skills" class="section-padding">
+  <div class="container-main">
+    <SectionHeader label="Expertise" title="Skills & Background" id="skills" />
+
+    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        skillCategories.map((category, categoryIndex) => (
+          <div
+            class="will-animate animate-fade-in-up"
+            style={`animation-delay: ${150 + categoryIndex * 75}ms`}
+          >
+            <h3 class="text-label mb-4 pb-2 border-b border-border">
+              {category.name}
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              {category.skills.map((skill, skillIndex) => (
+                <SkillBadge
+                  skill={skill}
+                  accent={category.accent || "neutral"}
+                  delay={150 + categoryIndex * 75 + skillIndex * 30}
+                />
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Additional Background Info -->
+    <div class="mt-16 grid gap-12 lg:grid-cols-2">
+      <!-- Education & Certifications -->
+      <div class="space-y-12">
+        <div class="will-animate animate-fade-in-up delay-300">
+          <h3 class="text-subheading mb-6 flex items-center gap-3">
+            <span class="text-accent">
+              <Education class="size-6" />
+            </span>
+            Education
+          </h3>
+
+          <div class="space-y-8">
+            <!-- Degree -->
+            <div>
+              <p class="text-label mb-4 pb-2 border-b border-border">
+                Academic
+              </p>
+              <div>
+                <h4 class="text-body text-primary font-medium">
+                  {education.degree}
+                </h4>
+                <p class="text-body-sm text-secondary mt-1">
+                  {education.institution}
+                </p>
+                <p class="font-mono text-xs text-muted mt-2">
+                  {education.graduated}
+                </p>
+              </div>
+            </div>
+
+            <!-- Certifications -->
+            {
+              certifications.length > 0 && (
+                <div>
+                  <p class="text-label mb-4 pb-2 border-b border-border">
+                    Certifications
+                  </p>
+                  <div class="space-y-4">
+                    {certifications.map((cert) => (
+                      <div>
+                        <h4 class="text-body text-primary font-medium">
+                          {cert.name}
+                        </h4>
+                        <p class="font-mono text-xs text-muted mt-0.5">
+                          {cert.status}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )
+            }
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="will-animate animate-fade-in-up delay-400">
+        <h3 class="text-subheading mb-6 flex items-center gap-3">
+          <span class="text-accent">
+            <Globe class="size-6" />
+          </span>
+          Languages
+        </h3>
+        <div class="grid gap-6 sm:grid-cols-2">
+          {
+            languages.map((lang, i) => (
+              <div
+                class="rounded-lg bg-subtle/50 border border-transparent transition-colors duration-300"
+                style={`transition-delay: ${i * 50}ms`}
+              >
+                <p class="text-body text-primary font-medium">{lang.name}</p>
+                <p class="text-body-sm text-secondary mt-1">{lang.level}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Interests -->
+      <div class="lg:col-span-2 will-animate animate-fade-in-up delay-500">
+        <h3 class="text-subheading mb-6 flex items-center gap-3">
+          <span class="text-accent">
+            <Star class="size-6" />
+          </span>
+          Interests
+        </h3>
+        <div class="grid gap-8 sm:grid-cols-2">
+          <div>
+            <p class="text-label mb-4 pb-2 border-b border-border">Learning</p>
+            <div class="flex flex-wrap gap-2 mt-2">
+              {
+                interests.learning.map((item) => (
+                  <span class="px-3 py-1 bg-subtle rounded-full text-body-sm text-secondary hover:text-primary transition-colors cursor-default">
+                    {item}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+          <div>
+            <p class="text-label mb-4 pb-2 border-b border-border">Personal</p>
+            <div class="flex flex-wrap gap-2 mt-2">
+              {
+                interests.personal.map((item) => (
+                  <span class="px-3 py-1 bg-subtle rounded-full text-body-sm text-secondary hover:text-primary transition-colors cursor-default">
+                    {item}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

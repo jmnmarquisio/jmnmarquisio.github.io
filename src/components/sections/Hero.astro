@@ -1,0 +1,131 @@
+---
+import { personal } from "../../data/content";
+import LinkedIn from "../icons/LinkedIn.astro";
+import GitHub from "../icons/GitHub.astro";
+---
+
+<section
+  id="hero"
+  class="hero relative min-h-screen flex flex-col justify-center overflow-hidden"
+>
+  <!-- Ambient background - subtle, not distracting -->
+  <div class="ambient-bg absolute inset-0 -z-10">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <div class="container-main">
+    <div class="max-w-3xl">
+      <!-- Name - the main focus -->
+      <h1
+        class="text-display text-primary mb-8 will-animate animate-fade-in-up"
+      >
+        {personal.name}
+      </h1>
+
+      <!-- Title block - simplified to just two lines -->
+      <div class="space-y-1 mb-10 will-animate animate-fade-in-up delay-200">
+        <p class="text-subheading text-secondary">
+          {personal.title}
+        </p>
+        <p class="text-body text-muted">
+          {personal.subtitle}
+        </p>
+      </div>
+
+      <!-- Social + Location - clean row -->
+      <div
+        class="flex flex-wrap items-center gap-5 will-animate animate-fade-in-up delay-400"
+      >
+        <a
+          href={personal.social.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-muted hover:text-accent transition-colors duration-150"
+          aria-label="LinkedIn"
+        >
+          <LinkedIn class="size-5" />
+        </a>
+        <a
+          href={personal.social.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-muted hover:text-accent transition-colors duration-150"
+          aria-label="GitHub"
+        >
+          <GitHub class="size-5" />
+        </a>
+        <span class="text-border">·</span>
+        <a
+          href={personal.locationUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-animated text-body-sm"
+        >
+          {personal.location}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div
+    class="absolute bottom-8 left-1/2 -translate-x-1/2 will-animate animate-fade-in-up delay-500"
+  >
+    <div class="flex flex-col items-center gap-2 text-muted">
+      <div class="w-px h-8 bg-border relative overflow-hidden">
+        <div class="scroll-line absolute inset-0 bg-accent"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ambient-bg {
+    overflow: hidden;
+  }
+
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+  }
+
+  /* Dimmer orbs in dark mode */
+  :global(.dark) .orb {
+    opacity: 0.15;
+  }
+
+  .orb-1 {
+    width: 300px;
+    height: 300px;
+    background: var(--color-accent-muted);
+    top: -50px;
+    right: -50px;
+    animation: float 25s ease-in-out infinite;
+  }
+
+  .orb-2 {
+    width: 200px;
+    height: 200px;
+    background: var(--color-warm-muted);
+    bottom: 30%;
+    left: -30px;
+    animation: float 20s ease-in-out infinite reverse;
+  }
+
+  .scroll-line {
+    animation: scroll-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scroll-pulse {
+    0%,
+    100% {
+      transform: translateY(-100%);
+    }
+    50% {
+      transform: translateY(100%);
+    }
+  }
+</style>

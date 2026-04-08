@@ -1,0 +1,46 @@
+---
+import AstroIcon from "../icons/AstroIcon.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="py-10 border-t border-border">
+  <div class="container-main">
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+      <!-- Left side -->
+      <div class="flex items-center gap-3 text-body-sm text-muted">
+        <span>© {currentYear} Javier Rodríguez Viñas</span>
+      </div>
+
+      <!-- Right side -->
+      <div class="flex items-center gap-2 text-body-sm text-muted">
+        <span>Crafted with</span>
+        <a
+          href="https://astro.build"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-animated inline-flex items-center gap-1"
+        >
+          <AstroIcon class="w-4 h-4" />
+          Astro
+        </a>
+        <span class="text-border">+</span>
+        <a
+          href="https://tailwindcss.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-animated"
+        >
+          Tailwind
+        </a>
+      </div>
+    </div>
+
+    <!-- Easter egg -->
+    <p
+      class="mt-6 text-center text-label opacity-30 select-none cursor-default hover:opacity-70 transition-opacity duration-500"
+    >
+      // May your code compile on the first try
+    </p>
+  </div>
+</footer>

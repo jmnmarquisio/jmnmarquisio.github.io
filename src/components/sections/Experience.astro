@@ -1,0 +1,33 @@
+---
+import { experiences } from "../../data/content";
+import TimelineItem from "../ui/TimelineItem.astro";
+import SectionHeader from "../ui/SectionHeader.astro";
+import DotPattern from "../ui/DotPattern.astro";
+---
+
+<section
+  id="experience"
+  class="section-padding bg-subtle relative overflow-hidden"
+>
+  <DotPattern />
+
+  <div class="container-main relative">
+    <SectionHeader
+      label="Experience"
+      title="Where I've Worked"
+      id="experience"
+    />
+
+    <div class="mt-12">
+      {
+        experiences.map((exp, i) => (
+          <TimelineItem
+            experience={exp}
+            index={i}
+            isLast={i === experiences.length - 1}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

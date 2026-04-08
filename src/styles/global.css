@@ -1,0 +1,521 @@
+@import "tailwindcss";
+
+/* ============================================
+   DESIGN TOKENS - "Refined Rationalism with Soul"
+   Consolidated Typography + Dark Mode Support
+   ============================================ */
+
+@theme {
+  /* Typography - Font Families */
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, monospace;
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* CONSOLIDATED Typography Scale (reduced to 6 sizes) */
+  --text-xs: 0.875rem;    
+  --text-sm: 1rem;        
+  --text-base: 1.125rem;  
+  --text-lg: 2.75rem;      
+  --text-xl: 4rem;      
+  --text-display: clamp(5rem, 4.5rem + 2vw, 6rem); 
+
+  /* Color Palette - Light Mode (default) */
+  --color-bg: hsl(45, 20%, 97%);
+  --color-bg-subtle: hsl(45, 15%, 93%);
+  --color-bg-muted: hsl(45, 12%, 88%);
+  --color-text: hsl(220, 15%, 15%);
+  --color-text-secondary: hsl(220, 12%, 30%);
+  --color-text-muted: hsl(220, 10%, 50%);
+  --color-accent: hsl(220, 45%, 55%);
+  --color-accent-muted: hsl(220, 35%, 70%);
+  --color-warm: hsl(20, 35%, 60%);
+  --color-warm-muted: hsl(20, 30%, 75%);
+  --color-pink: hsl(330, 40%, 55%);
+  --color-pink-muted: hsl(330, 30%, 75%);
+  --color-cyan: hsl(190, 40%, 50%);
+  --color-cyan-muted: hsl(190, 30%, 75%);
+  --color-emerald: hsl(150, 35%, 50%);
+  --color-emerald-muted: hsl(150, 30%, 75%);
+  --color-violet: hsl(270, 40%, 60%);
+  --color-violet-muted: hsl(270, 30%, 75%);
+  --color-amber: hsl(35, 45%, 50%);
+  --color-amber-muted: hsl(35, 30%, 75%);
+  --color-highlight: hsl(50, 40%, 80%);
+  --color-border: hsl(45, 15%, 85%);
+  
+  /* Badge text colors - higher contrast for accessibility */
+  --color-accent-badge: hsl(220, 55%, 40%);
+  --color-warm-badge: hsl(20, 50%, 42%);
+  --color-pink-badge: hsl(330, 50%, 40%);
+  --color-cyan-badge: hsl(190, 55%, 35%);
+  --color-emerald-badge: hsl(150, 50%, 35%);
+  --color-violet-badge: hsl(270, 50%, 45%);
+  --color-amber-badge: hsl(35, 60%, 38%);
+
+  /* Animation Timing */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+
+.dark {
+  --color-bg: hsl(220, 15%, 10%);
+  --color-bg-subtle: hsl(220, 12%, 14%);
+  --color-bg-muted: hsl(220, 10%, 18%);
+  --color-text: hsl(45, 20%, 95%);
+  --color-text-secondary: hsl(45, 15%, 80%);
+  --color-text-muted: hsl(220, 10%, 55%);
+  --color-accent: hsl(220, 50%, 65%);
+  --color-accent-muted: hsl(220, 35%, 45%);
+  --color-warm: hsl(20, 40%, 65%);
+  --color-warm-muted: hsl(20, 30%, 45%);
+  --color-pink: hsl(330, 45%, 65%);
+  --color-pink-muted: hsl(330, 30%, 45%);
+  --color-cyan: hsl(190, 45%, 60%);
+  --color-cyan-muted: hsl(190, 30%, 45%);
+  --color-emerald: hsl(150, 40%, 60%);
+  --color-emerald-muted: hsl(150, 30%, 45%);
+  --color-violet: hsl(270, 45%, 70%);
+  --color-violet-muted: hsl(270, 30%, 45%);
+  --color-amber: hsl(35, 50%, 60%);
+  --color-amber-muted: hsl(35, 30%, 45%);
+  --color-highlight: hsl(220, 50%, 35%);
+  --color-border: hsl(220, 12%, 25%);
+  
+  /* Badge text colors - higher contrast for accessibility */
+  --color-accent-badge: hsl(220, 60%, 75%);
+  --color-warm-badge: hsl(20, 55%, 72%);
+  --color-pink-badge: hsl(330, 55%, 75%);
+  --color-cyan-badge: hsl(190, 60%, 70%);
+  --color-emerald-badge: hsl(150, 55%, 68%);
+  --color-violet-badge: hsl(270, 55%, 78%);
+  --color-amber-badge: hsl(35, 65%, 70%);
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+  transition: background-color var(--duration-normal) ease, color var(--duration-normal) ease;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-highlight);
+  color: var(--color-text);
+}
+
+/* ============================================
+   CONSOLIDATED TYPOGRAPHY CLASSES
+   ============================================ */
+
+/* Display heading - Hero only */
+.text-display {
+  font-family: var(--font-serif);
+  font-size: var(--text-display);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+/* Section headings - larger serif for visual hierarchy */
+.text-heading {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+/* Subheadings */
+.text-subheading {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+/* Body text */
+.text-body {
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+/* Small body text */
+.text-body-sm {
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+/* Labels and meta (monospace) */
+.text-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* Color utilities */
+.text-primary { color: var(--color-text); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-muted { color: var(--color-text-muted); }
+.text-accent { color: var(--color-accent); }
+.text-warm { color: var(--color-warm); }
+.text-pink { color: var(--color-pink); }
+.text-cyan { color: var(--color-cyan); }
+.text-emerald { color: var(--color-emerald); }
+.text-violet { color: var(--color-violet); }
+.text-amber { color: var(--color-amber); }
+
+/* Badge text colors - higher contrast */
+.text-accent-badge { color: var(--color-accent-badge); }
+.text-warm-badge { color: var(--color-warm-badge); }
+.text-pink-badge { color: var(--color-pink-badge); }
+.text-cyan-badge { color: var(--color-cyan-badge); }
+.text-emerald-badge { color: var(--color-emerald-badge); }
+.text-violet-badge { color: var(--color-violet-badge); }
+.text-amber-badge { color: var(--color-amber-badge); }
+
+.bg-base { background-color: var(--color-bg); }
+.bg-subtle { background-color: var(--color-bg-subtle); }
+.bg-muted { background-color: var(--color-bg-muted); }
+
+.border-subtle { border-color: var(--color-border); }
+
+/* ============================================
+   ANIMATION UTILITIES
+   ============================================ */
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-out-right {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(15px, -15px); }
+  66% { transform: translate(-10px, 10px); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up var(--duration-slow) var(--ease-out-expo) forwards;
+}
+
+.animate-fade-in-left {
+  animation: fade-in-left var(--duration-slow) var(--ease-out-expo) forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in var(--duration-slow) var(--ease-out-expo) forwards;
+}
+
+/* Initial state for entrance so the element stays hidden during animation-delay */
+.origin-fade-in-right {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.animate-fade-in-right {
+  animation: fade-in-right var(--duration-slow) var(--ease-out-expo) forwards;
+}
+
+.animate-fade-out-right {
+  animation: fade-out-right var(--duration-normal) var(--ease-out-expo) forwards;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0); }
+}
+
+.animate-blink {
+  animation: blink 5s infinite;
+  transform-origin: center;
+}
+
+.will-animate {
+  opacity: 0;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+
+/* ============================================
+   LAYOUT UTILITIES
+   ============================================ */
+
+/* Consistent container for ALL sections */
+.container-main {
+  max-width: 64rem; /* 1024px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 768px) {
+  .container-main {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-main {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* ============================================
+   INTERACTIVE ELEMENTS
+   ============================================ */
+
+/* Animated underline link - slides in L→R, exits L→R */
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--duration-normal) var(--ease-out-quart);
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Combined animated link with color + underline */
+.link-animated {
+  position: relative;
+  text-decoration: none;
+  color: var(--color-text-muted);
+  transition: color var(--duration-fast) ease;
+}
+
+.link-animated:hover {
+  color: var(--color-accent);
+}
+
+.link-animated::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--duration-normal) var(--ease-out-quart);
+}
+
+.link-animated:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   DARK MODE TOGGLE BUTTON
+   ============================================ */
+
+/* Shared Round Icon Button */
+.btn-round-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all var(--duration-normal) ease;
+  z-index: 50;
+  color: var(--color-text-secondary);
+}
+
+.btn-round-icon:hover {
+  background-color: var(--color-bg-muted);
+  transform: scale(1.05);
+  color: var(--color-text);
+}
+
+.btn-round-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: currentColor;
+  transition: color var(--duration-fast) ease;
+}
+
+
+
+/* ============================================
+   BACKGROUND EFFECTS & TEXTURES
+   ============================================ */
+
+/* Dot Matrix Pattern */
+.bg-dots {
+  background-size: 24px 24px;
+  background-image: radial-gradient(circle, var(--color-text-secondary) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at 50% 50%, black, transparent 80%), radial-gradient(circle at 0% 0%, black, transparent 50%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black, transparent 80%), radial-gradient(circle at 0% 0%, black, transparent 50%);
+  opacity: 0.2;
+}
+
+/* Animation: Breathe (Subtle Opacity/Scale Pulse) */
+@keyframes breathe {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+.animate-breathe {
+  animation: breathe 8s ease-in-out infinite;
+}
+
+/* Update ambient background orbs to use breathe */
+.ambient-bg .orb {
+  animation: float 25s ease-in-out infinite, breathe 10s ease-in-out infinite;
+}
+
+/* ============================================
+   VIEW TRANSITIONS - Theme Toggle
+   ============================================ */
+
+/* Disable default cross-fade to use custom circular wipe */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Keep old state visible until new state wipes over it */
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+/* New state with custom animation (applied via JS) */
+::view-transition-new(root) {
+  z-index: 2;
+}
+
+/* Subtle blur during transition for smoother feel */
+::view-transition-group(root) {
+  animation-duration: 600ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
