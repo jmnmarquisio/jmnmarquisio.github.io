@@ -1,0 +1,33 @@
+---
+import { tennis experience } from "../../data/content";
+import TimelineItem from "../ui/TimelineItem.astro";
+import SectionHeader from "../ui/SectionHeader.astro";
+import DotPattern from "../ui/DotPattern.astro";
+---
+
+<section
+  id="tennis experience"
+  class="section-padding bg-subtle relative overflow-hidden"
+>
+  <DotPattern />
+
+  <div class="container-main relative">
+    <SectionHeader
+      label="Tennis Experience"
+      title="My Tennis Experience"
+      id="tennis experience"
+    />
+
+    <div class="mt-12">
+      {
+        experiences.map((exp, i) => (
+          <TimelineItem
+            tennis experience={exp}
+            index={i}
+            isLast={i === tennisexperiences.length - 1}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

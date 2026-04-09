@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
@@ -7,8 +8,8 @@ interface Props {
 }
 
 const {
-  title = "Javier Rodríguez Viñas — Frontend Engineer & Designer",
-  description = "Lead Frontend Engineer & UX Specialist bridging design and code. Expert in React, Next.js, TypeScript, and Design Systems.",
+  title = "Juan Mateo Núñez Marquisio - Calm Ambition",
+description = "Final-year Economics student relocating to Zurich in 2026. International profile with experience across finance, business, entrepreneurship and elite sport.",
 } = Astro.props;
 
 import Navigation from "../components/Navigation.tsx";
@@ -36,7 +37,7 @@ import Analytics from "@vercel/analytics/astro";
     <!-- SEO Meta -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="author" content="Javier Rodríguez Viñas" />
+    <meta name="author" content="Juan Mateo Nuñez Marquisio" />
     <meta name="generator" content={Astro.generator} />
     <meta name="google" content="translate" />
 
@@ -60,9 +61,7 @@ import Analytics from "@vercel/analytics/astro";
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"
     />
 
     <!-- View Transitions -->

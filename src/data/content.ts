@@ -2,28 +2,30 @@
 // Javier Rodríguez Viñas - Lead Frontend Engineer & UX Specialist
 
 export const personal = {
-  name: "Javier Rodríguez Viñas.",
-  title: "Lead Frontend Engineer",
-  subtitle: "With Fullstack & Design expertise",
+  name: "Juan Mateo Nuñez Marquisio",
+  title: "Economics Graduate",
+  subtitle: "Former ATP Player | Final-year Economics student | Nova Talent",
   tagline: "Bridging design and code",
-  email: "javi.vinas.2000@gmail.com",
-  phone: "+34 646 418 718",
+  email: "jmn.marquisio@gmail.com",
+  phone: "+34 641 74 68 43",
   location: "Vigo, Spain",
   locationUrl: "https://maps.app.goo.gl/UJeRYwdfmHvyEmwm6",
   social: {
-    linkedin: "https://www.linkedin.com/in/javi-rodriguez-vinas/",
-    github: "https://github.com/JaviVinnas",
+    linkedin: "https://www.linkedin.com/in/juanmateonunezmarquisio/",
+    github: "https://github.com/jmnmarquisio",
   },
 };
 
 export const bio = {
-  short: "Software Engineer who understands products from both design and implementation perspectives. 5 years building high-performance interfaces, Design Systems, and digital products that feel as good as they work.",
+  short: "I am currently completing my Bachelor's degree in Economics and will relocate to the Zurich area in August/September 2026. I am seeking entry-level, internship, or graduate opportunities in banking, finance, or business-related roles, where I can contribute from day one while continuing to learn in a demanding and international environment.",
   full: [
-    "I approach products holistically, understanding both the **design intent** and the **technical constraints** that shape great experiences.",
-    "5 years specialized in **Frontend** and digital product development, architecting scalable interfaces and complete **Design Systems**.",
-    "Strong **Fullstack** foundation (Node.js, Python, AWS) that enables me to make informed decisions across the entire stack.",
-    "Obsessed with the details that make products feel polished: motion design, micro-interactions, and the subtle cues that guide users effortlessly.",
-    "Currently redefining my workflow with AI-native tools (Cursor, Claude Code) and exploring the architectural patterns for the next wave of software, where asynchronous agentic delegation becomes a core UX component. Also deep-diving into modern frameworks like TanStack Start.",
+    "I am currently completing my Bachelor's degree in Economics and will relocate to the Zurich area in August/September 2026. I am seeking entry-level, internship, or graduate opportunities in banking, finance, or business-related roles, where I can contribute from day one while continuing to learn in a demanding and international environment.",
+    "Before fully focusing on my studies, I competed as a professional tennis player on the ATP Tour at 19. That experience shaped the way I work: with discipline, ownership, dedication, and the ability to perform under pressure. It also taught me how to stay calm in demanding situations, adapt quickly, and keep moving forward with consistency.",
+    "At 24, I have lived in Uruguay, Spain, and Sweden, and have also spent meaningful time in the United States, Switzerland, and Norway. Moving across different countries, cultures, and systems has given me a broad perspective and a strong ability to adapt. I speak Spanish, English, and Swedish, and I am currently learning German to better integrate into Switzerland.",
+    "Through my degree in Economics, I have built a solid foundation in economics, business, and financial concepts. Along the way, I have also gained exposure to areas such as marketing, taxation, entrepreneurship, and product development, which has helped me understand how different parts of a business connect. This broader background has strengthened my analytical thinking and my ability to learn quickly, understand new frameworks, and adapt to different types of work.",
+    "What I bring is a combination of resilience, international perspective, analytical ability, and a strong willingness to learn. I am known for being calm, solution-oriented, and easy to work with, while also taking responsibility and maintaining high standards for myself. I value professionalism, clarity, and steady execution.",
+    "Zurich especially appeals to me because of its international outlook, strong business environment, and understated ambition. It is a place whose focus, seriousness, and calm intensity align well with the kind of person I am and the kind of environment in which I do my best work.",
+    "I would welcome the opportunity to be part of a team where I can contribute, grow, and build a strong long-term career.",
   ],
 };
 
@@ -40,13 +42,13 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    role: "Lead Frontend Engineer",
-    company: "Sbayt",
-    companyUrl: "https://sbayt.ai/es/",
-    period: "November 2023 → Present",
-    location: "Remote (A Coruña, ES)",
-    type: "remote",
-    description: "Technical leadership of the frontend for an industrial data analytics platform (steel rolling mills) designed for plant operators and business-side users.",
+    role: "Tax Consultant Intern",
+    company: "Marosa VAT",
+    companyUrl: "https://marosavat.com/",
+    period: "FEB 2026 → JUN 2026",
+    location: "Onsite (Vigo, SP)",
+    type: "onsite",
+    description: "Supporting EU-based and international companies with VAT compliance across multiple jurisdictions, including registrations, filings and cross-border reporting. Gaining strong exposure to EU regulation, compliance and international business operations.",
     highlights: [
       "Built from scratch a Next.js platform interfacing (via REST APIs & WebSockets) with Big Data systems (Spark, Kafka, MinIO) for failure prediction and medium-term self-correction",
       "Implemented real-time observability dashboards, solving the dual challenge of guiding user attention via subtle burst animations and meticulously managing performance to avoid saturating the React main thread. A consistently snappy experience was not an extra, but key for building user trust in the product",
@@ -56,13 +58,13 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    role: "Fullstack Engineer",
-    company: "Gradiant",
-    companyUrl: "https://www.gradiant.org",
-    period: "February 2022 → October 2023",
-    location: "Hybrid (Vigo, ES)",
-    type: "hybrid",
-    description: "Fullstack Engineer within the Cybersecurity division, collaborating extensively across both frontend and backend to build secure digital products.",
+    role: "Financial Analyst Intern",
+    company: "Denis Suárez Foundation",
+    companyUrl: "https://fundaciondenissuarez.com/",
+    period: "JUN 2025",
+    location: "Onsite (Vigo, SP)",
+    type: "onsite",
+    description: "Conducted financial and strategic analysis to identify ways to increase recurring revenue and support long-term growth. Delivered structured insights to support decision-making.",
     highlights: [
       "Spearheaded the development of a Self-Sovereign Identity (SSI) Android application, managing the full vertical from the Kotlin implementation to the creation of a bespoke Design System",
       "Collaborated on both frontend and backend architectures, narrowing the gap between security requirements and user experience",
@@ -71,13 +73,121 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    role: "Frontend Engineer",
-    company: "Gradiant",
-    companyUrl: "https://www.gradiant.org",
-    period: "June 2021 → August 2021",
-    location: "Hybrid (Vigo, ES)",
-    type: "hybrid",
-    description: "Productization of a powerful CLI-based data anonymization system (part of a European Cybersecurity Project) to make it accessible to external users.",
+    role: "Founder",
+    company: "NET",
+    companyUrl: "https://net-app.io/",
+    period: "JUN 2024 → Present",
+    location: "Onsite (Vigo, SP)",
+    type: "onsite",
+    description: "Building a platform that connects racket sports professionals with job opportunities. Leading product vision, market research, UX thinking and early-stage business strategy.",
+    highlights: [
+      "Designed the visual identity and implemented critical workflows in a Vue/TypeScript SPA, transforming a CLI-only tool into a modern web product",
+      "Significantly improved usability and visibility, enabling external stakeholders to leverage powerful data anonymization capabilities without technical friction",
+    ],
+  },
+  {
+    role: "Co-Founder & Marketing Manager",
+    company: "Tripnest.io / Skine.no",
+    period: "2021 → 2024",
+    location: "Remote (Oslo, NO)",
+    type: "remote",
+    description: "Co-founded digital ventures and led branding, marketing, UX/UI and growth initiatives. Worked with over 50 international content creators and contributed to the visibility and expansion of a platform with 1.2M property listings.",
+    highlights: [
+      "Designed the visual identity and implemented critical workflows in a Vue/TypeScript SPA, transforming a CLI-only tool into a modern web product",
+      "Significantly improved usability and visibility, enabling external stakeholders to leverage powerful data anonymization capabilities without technical friction",
+    ],
+  },
+  {
+    role: "Customer Service & VIP Lounge Staff",
+    company: "Carrasco International Airport",
+    companyUrl: "https://aeropuertodecarrasco.com.uy/en/",
+    period: "2021 → 2022",
+    location: "Onsite (Montevideo, UY)",
+    type: "onsite",
+    description: "Worked directly with customers across phone, email and web support, while assisting VIP and high-net-worth travelers in a fast-paced airport environment.",
+    highlights: [
+      "Designed the visual identity and implemented critical workflows in a Vue/TypeScript SPA, transforming a CLI-only tool into a modern web product",
+      "Significantly improved usability and visibility, enabling external stakeholders to leverage powerful data anonymization capabilities without technical friction",
+    ],
+  },
+];
+
+export interface TennisExperience {
+  role: string;
+  company: string;
+  companyUrl?: string;
+  period: string;
+  location: string;
+  type: "remote" | "hybrid" | "onsite";
+  description: string;
+  highlights: string[];
+}
+
+export const tennisexperiences: TennisExperience[] = [
+  {
+    role: "Tax Consultant Intern",
+    company: "Marosa VAT",
+    companyUrl: "https://marosavat.com/",
+    period: "FEB 2026 → JUN 2026",
+    location: "Onsite (Vigo, SP)",
+    type: "onsite",
+    description: "Supporting EU-based and international companies with VAT compliance across multiple jurisdictions, including registrations, filings and cross-border reporting. Gaining strong exposure to EU regulation, compliance and international business operations.",
+    highlights: [
+      "Built from scratch a Next.js platform interfacing (via REST APIs & WebSockets) with Big Data systems (Spark, Kafka, MinIO) for failure prediction and medium-term self-correction",
+      "Implemented real-time observability dashboards, solving the dual challenge of guiding user attention via subtle burst animations and meticulously managing performance to avoid saturating the React main thread. A consistently snappy experience was not an extra, but key for building user trust in the product",
+      "Designed and built a complete Design System (inspired by Shopify Polaris) using progressive disclosure: extremely powerful and expressive technical UI that never feels overwhelming",
+      "Developed 'physical' animations replicating analog control panels as a design nod to the industrial context this product aims to digitize",
+      "Built a type-safe, procedural system for generating complex data tables on demand (sorting, filtering via criteria pattern, pagination). The challenge wasn't just building tables, but enabling anyone (even coding agents) to spin up new ones effortlessly and consistently",
+    ],
+  },
+  {
+    role: "Financial Analyst Intern",
+    company: "Denis Suárez Foundation",
+    companyUrl: "https://fundaciondenissuarez.com/",
+    period: "JUN 2025",
+    location: "Onsite (Vigo, SP)",
+    type: "onsite",
+    description: "Conducted financial and strategic analysis to identify ways to increase recurring revenue and support long-term growth. Delivered structured insights to support decision-making.",
+    highlights: [
+      "Spearheaded the development of a Self-Sovereign Identity (SSI) Android application, managing the full vertical from the Kotlin implementation to the creation of a bespoke Design System",
+      "Collaborated on both frontend and backend architectures, narrowing the gap between security requirements and user experience",
+      "Implemented efficient data anonymization algorithms in Python backends (NumPy, Pandas) for sensitive datasets",
+      "Built and optimized security-critical SPAs using React and Vue, and mentored interns to raise the team's code quality standards",
+    ],
+  },
+  {
+    role: "Founder",
+    company: "NET",
+    companyUrl: "https://net-app.io/",
+    period: "JUN 2024 → Present",
+    location: "Onsite (Vigo, SP)",
+    type: "onsite",
+    description: "Building a platform that connects racket sports professionals with job opportunities. Leading product vision, market research, UX thinking and early-stage business strategy.",
+    highlights: [
+      "Designed the visual identity and implemented critical workflows in a Vue/TypeScript SPA, transforming a CLI-only tool into a modern web product",
+      "Significantly improved usability and visibility, enabling external stakeholders to leverage powerful data anonymization capabilities without technical friction",
+    ],
+  },
+  {
+    role: "Co-Founder & Marketing Manager",
+    company: "Tripnest.io / Skine.no",
+    period: "2021 → 2024",
+    location: "Remote (Oslo, NO)",
+    type: "remote",
+    description: "Co-founded digital ventures and led branding, marketing, UX/UI and growth initiatives. Worked with over 50 international content creators and contributed to the visibility and expansion of a platform with 1.2M property listings.",
+    highlights: [
+      "Designed the visual identity and implemented critical workflows in a Vue/TypeScript SPA, transforming a CLI-only tool into a modern web product",
+      "Significantly improved usability and visibility, enabling external stakeholders to leverage powerful data anonymization capabilities without technical friction",
+    ],
+  },
+  {
+    role: "Customer Service & VIP Lounge Staff",
+    company: "Carrasco International Airport",
+    companyUrl: "https://aeropuertodecarrasco.com.uy/en/",
+    period: "2021 → 2022",
+    location: "Onsite (Montevideo, UY)",
+    type: "onsite",
+    description: "Worked directly with customers across phone, email and web support, while assisting VIP and high-net-worth travelers in a fast-paced airport environment.",
     highlights: [
       "Designed the visual identity and implemented critical workflows in a Vue/TypeScript SPA, transforming a CLI-only tool into a modern web product",
       "Significantly improved usability and visibility, enabling external stakeholders to leverage powerful data anonymization capabilities without technical friction",
@@ -98,118 +208,91 @@ export interface SkillCategory {
 
 export const skillCategories: SkillCategory[] = [
   {
-    name: "Frontend Core",
+    name: "Hard Skills",
     skills: [
-      { name: "React", url: "https://react.dev" },
-      { name: "Next.js", url: "https://nextjs.org" },
-      { name: "TypeScript", url: "https://www.typescriptlang.org" },
-      { name: "Vue 3", url: "https://vuejs.org" },
-      { name: "Astro", url: "https://astro.build" },
-      "HTML5",
-      "CSS3",
-      { name: "Preact", url: "https://preactjs.com" },
-    ],
-    accent: "blue",
-  },
-  {
-    name: "UI & Styling",
-    skills: [
-      { name: "Tailwind CSS", url: "https://tailwindcss.com" },
-      { name: "Framer Motion", url: "https://motion.dev" },
-      { name: "Radix UI", url: "https://www.radix-ui.com" },
-      "CSS Modules",
-      { name: "Rive", url: "https://rive.app" },
-    ],
-    accent: "pink",
-  },
-  {
-    name: "State & Data",
-    skills: [
-      { name: "React Query", url: "https://tanstack.com/query" },
-      { name: "Redux", url: "https://redux.js.org" },
-      { name: "Vuex", url: "https://vuex.vuejs.org" },
-      { name: "Zustand", url: "https://zustand.docs.pmnd.rs" },
-      "Axios",
+      "Economic Analysis",
+      "Financial Markets",
+      "Marketing",
+      "Branding",
+      "UX/UI",
+      "Graphics",
+      "Design",
+      "VAT Compliance",
     ],
     accent: "cyan",
   },
   {
-    name: "Backend",
+    name: "Soft Skills",
     skills: [
-      { name: "Node.js", url: "https://nodejs.org" },
-      { name: "Express.js", url: "https://expressjs.com" },
-      { name: "Hono.js", url: "https://hono.dev" },
-      { name: "Python", url: "https://www.python.org" },
-      { name: "Prisma", url: "https://www.prisma.io" },
-      { name: "DrizzleORM", url: "https://orm.drizzle.team" },
-    ],
-    accent: "emerald",
-  },
-  {
-    name: "Databases",
-    skills: [
-      { name: "PostgreSQL", url: "https://www.postgresql.org" },
-      { name: "MongoDB", url: "https://www.mongodb.com" },
-      { name: "MinIO", url: "https://min.io" },
-    ],
-    accent: "violet",
-  },
-  {
-    name: "Infrastructure",
-    skills: [
-      { name: "AWS", url: "https://aws.amazon.com" },
-      { name: "Docker", url: "https://www.docker.com" },
-      { name: "GitHub Actions", url: "https://github.com/features/actions" },
-      "CI/CD",
+      "Strategic Thinking",
+      "Interpersonal skills",
+      "Client-Oriented Mindset",
+      "Discipline",
+      "Work Ethic",
+      "Cross-Cultural Communication",
     ],
     accent: "warm",
+  },
+  {
+    name: "Code & Data",
+    skills: [
+      "Python",
+      "Excel"
+    ],
+    accent: "warm",
+  },
+  {
+    name: "AI tools",
+    skills: [
+      { name: "ChatGPT", url: "https://chatgpt.com/" },
+    ],
+    accent: "neutral",
   },
   {
     name: "Design & UX",
     skills: [
       { name: "Figma", url: "https://www.figma.com" },
-      "Wireframing",
-      "Prototyping",
-      "Design Systems",
-      "Motion Design",
-    ],
-    accent: "amber",
-  },
-  {
-    name: "Other",
-    skills: [
-      { name: "Git", url: "https://git-scm.com" },
-      "Monorepo Architecture",
-      "Browser Internals",
-      "Functional Programming",
+      { name: "Adobe", url: "https://www.adobe.com/" },
     ],
     accent: "neutral",
   },
 ];
 
 export const education = {
-  degree: "B.Sc. in Computer Engineering",
-  institution: "University of Santiago de Compostela (USC)",
-  graduated: "June 2022",
+  degree: "B.Sc. in Economics",
+  institution: "University of Vigo (UVigo)",
+  graduated: "SEP 2022 → JUN 2026",
 };
 
 export const certifications = [
   {
-    name: "AWS Certified Developer",
-    status: "In progress",
+    name: "Python",
+    status: "FreeCodeCamp",
+  },
+  {
+    name: "Responsive Web Design",
+    status: "FreeCodeCamp",
+  },
+  {
+    name: "Financial Market Analysis",
+    status: "IMF",
+  },
+  {
+    name: "INCUVI Avanza",
+    status: "Uvigo Entreprenourship program",
   },
 ];
 
 export const languages = [
   { name: "Spanish", level: "Native" },
-  { name: "Galician", level: "Native" },
-  { name: "English", level: "B1 (Daily professional use)" },
-  { name: "French", level: "Elementary (A1 certified)" },
+  { name: "Swedish", level: "Native" },
+  { name: "English", level: "Professional Proficiency" },
+  { name: "German", level: "Elementary (A1)" },
 ];
 
 export const interests = {
-  learning: ["TanStack Start", "AI-powered coding tools (Cursor, Claude Code)", "Motion Design"],
-  personal: ["Swimming", "Music", "Graphic Design", "Travel", "Films", "Art"],
+  learning: ["Python", "AI-powered coding tools (Cursor, Claude Code)", "VAT Compliance", "SQL"],
+  personal: ["Tennis", "Music", "Photography", "Travel", "Films", "Pizza", "Sports"],
 };
 
 export interface Project {
@@ -244,16 +327,6 @@ export const projects: Project[] = [
       "Custom design based on shadcn/ui for a functional, modern aesthetic that conveys calm",
     ],
     github: "https://github.com/JaviVinnas/technical-assignment-kannact",
-  },
-  {
-    title: "Time Artifacts",
-    type: "Digital Product",
-    description: "Gumroad store featuring wall calendars I design and release annually.",
-    highlights: [
-      "Born from a personal need when I couldn't find a wall calendar that truly resonated with me",
-      "Serves as a creative playground to explore typography and visual consistency, free from the constraints of software engineering",
-    ],
-    url: "https://timeartifacts.gumroad.com",
   },
 ];
 
