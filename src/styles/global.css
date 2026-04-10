@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 
 /* ============================================
@@ -150,13 +150,15 @@ body {
 .text-heading {
   font-family: var(--font-main);
   font-size: var(--text-xl);
+  font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.03em;
 }
 
 .text-subheading {
   font-family: var(--font-main);
-  font-size: var(--text-lg);
+  font-size: 2.5rem !important;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
