@@ -141,6 +141,22 @@ export const tennisexperiences: TennisExperience[] = [
     ],
   },
   {
+    role: "Nova Talent Member",
+    company: "Nova Talent",
+    companyUrl: "https://www.novatalent.com/",
+    period: "AUG 2025 → PRESENT",
+    location: "Remote (SP)",
+    type: "remote",
+    description: "Supporting EU-based and international companies with VAT compliance across multiple jurisdictions, including registrations, filings and cross-border reporting. Gaining strong exposure to EU regulation, compliance and international business operations.",
+    highlights: [
+      "Built from scratch a Next.js platform interfacing (via REST APIs & WebSockets) with Big Data systems (Spark, Kafka, MinIO) for failure prediction and medium-term self-correction",
+      "Implemented real-time observability dashboards, solving the dual challenge of guiding user attention via subtle burst animations and meticulously managing performance to avoid saturating the React main thread. A consistently snappy experience was not an extra, but key for building user trust in the product",
+      "Designed and built a complete Design System (inspired by Shopify Polaris) using progressive disclosure: extremely powerful and expressive technical UI that never feels overwhelming",
+      "Developed 'physical' animations replicating analog control panels as a design nod to the industrial context this product aims to digitize",
+      "Built a type-safe, procedural system for generating complex data tables on demand (sorting, filtering via criteria pattern, pagination). The challenge wasn't just building tables, but enabling anyone (even coding agents) to spin up new ones effortlessly and consistently",
+    ],
+  },
+  {
     role: "Financial Analyst Intern",
     company: "Denis Suárez Foundation",
     companyUrl: "https://fundaciondenissuarez.com/",
@@ -159,7 +175,7 @@ export const tennisexperiences: TennisExperience[] = [
     role: "Founder",
     company: "NET",
     companyUrl: "https://net-app.io/",
-    period: "JUN 2024 → Present",
+    period: "JUN 2024 → PRESENT",
     location: "Onsite (Vigo, SP)",
     type: "onsite",
     description: "Building a platform that connects racket sports professionals with job opportunities. Leading product vision, market research, UX thinking and early-stage business strategy.",
@@ -208,6 +224,29 @@ export interface SkillCategory {
 
 export const skillCategories: SkillCategory[] = [
   {
+    name: "Code & Data",
+    skills: [
+      "Python",
+      "Excel"
+    ],
+    accent: "warm",
+  },
+  {
+    name: "AI tools",
+    skills: [
+      { name: "ChatGPT", url: "https://chatgpt.com/" },
+    ],
+    accent: "neutral",
+  },
+  {
+    name: "Design & UX",
+    skills: [
+      { name: "Figma", url: "https://www.figma.com" },
+      { name: "Adobe", url: "https://www.adobe.com/" },
+    ],
+    accent: "neutral",
+  },
+  {
     name: "Hard Skills",
     skills: [
       "Economic Analysis",
@@ -232,29 +271,6 @@ export const skillCategories: SkillCategory[] = [
       "Cross-Cultural Communication",
     ],
     accent: "warm",
-  },
-  {
-    name: "Code & Data",
-    skills: [
-      "Python",
-      "Excel"
-    ],
-    accent: "warm",
-  },
-  {
-    name: "AI tools",
-    skills: [
-      { name: "ChatGPT", url: "https://chatgpt.com/" },
-    ],
-    accent: "neutral",
-  },
-  {
-    name: "Design & UX",
-    skills: [
-      { name: "Figma", url: "https://www.figma.com" },
-      { name: "Adobe", url: "https://www.adobe.com/" },
-    ],
-    accent: "neutral",
   },
 ];
 

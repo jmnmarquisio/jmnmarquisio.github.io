@@ -8,11 +8,11 @@ export default function ThemeToggle() {
     // Sync with initial state
     const isDarkState = document.documentElement.classList.contains('dark');
     setIsDark(isDarkState);
-    
+
     // Also check local storage/system pref in case it wasn't set on server/static html
     const theme = localStorage.getItem('theme');
     const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     if (theme === 'dark' || (!theme && systemDark)) {
       if (!isDarkState) {
         document.documentElement.classList.add('dark');
@@ -28,7 +28,7 @@ export default function ThemeToggle() {
 
   const toggleTheme = async (event: MouseEvent) => {
     const newIsDark = !isDark;
-    
+
     // Check if browser supports View Transitions API
     if (!document.startViewTransition) {
       // Fallback for browsers without View Transitions
@@ -69,7 +69,7 @@ export default function ThemeToggle() {
 
     // Apply circular wipe animation
     await transition.ready;
-    
+
     document.documentElement.animate(
       {
         clipPath: [
@@ -94,10 +94,10 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
     >
       {/* Sun icon (shown in dark mode) */}
-      <svg 
+      <svg
         className={`icon-sun absolute transition-all duration-300 ease-out-expo ${isDark ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-0'}`}
-        fill="none" 
-        stroke="currentColor" 
+        fill="none"
+        stroke="currentColor"
         viewBox="0 0 24 24"
       >
         <path
@@ -108,10 +108,10 @@ export default function ThemeToggle() {
         ></path>
       </svg>
       {/* Moon icon (shown in light mode) */}
-      <svg 
+      <svg
         className={`icon-moon absolute transition-all duration-300 ease-out-expo ${!isDark ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 rotate-90 scale-0'}`}
-        fill="none" 
-        stroke="currentColor" 
+        fill="none"
+        stroke="currentColor"
         viewBox="0 0 24 24"
       >
         <path
@@ -121,12 +121,12 @@ export default function ThemeToggle() {
           d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
         ></path>
       </svg>
-      
+
       <style>{`
         .theme-toggle {
             position: fixed;
             top: 1.5rem;
-            right: 1.5rem;
+            left: 1.5rem;
             z-index: 50;
         }
         .theme-toggle svg {

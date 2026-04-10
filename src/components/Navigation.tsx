@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from 'preact/hooks';
 
 export default function Navigation() {
@@ -30,7 +29,7 @@ export default function Navigation() {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: "-20% 0px -60% 0px", // Trigger when section is near top
+      rootMargin: "-20% 0px -60% 0px",
       threshold: 0,
     };
 
@@ -71,7 +70,8 @@ export default function Navigation() {
         onClick={toggleMenu}
       >
         <svg
-          className={`icon-menu absolute transition-all duration-300 ease-out-expo ${isOpen ? 'opacity-0 scale-0 rotate-90' : 'opacity-100 scale-100 rotate-0'}`}
+          className={`icon-menu absolute transition-all duration-300 ease-out-expo ${isOpen ? "opacity-0 scale-0 rotate-90" : "opacity-100 scale-100 rotate-0"
+            }`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -81,10 +81,12 @@ export default function Navigation() {
             strokeLinejoin="round"
             strokeWidth="1.5"
             d="M4 6h16M4 12h16M4 18h16"
-          ></path>
+          />
         </svg>
+
         <svg
-          className={`icon-close absolute transition-all duration-300 ease-out-expo ${isOpen ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-0 -rotate-90'}`}
+          className={`icon-close absolute transition-all duration-300 ease-out-expo ${isOpen ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-0 -rotate-90"
+            }`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -94,14 +96,27 @@ export default function Navigation() {
             strokeLinejoin="round"
             strokeWidth="1.5"
             d="M6 18L18 6M6 6l12 12"
-          ></path>
+          />
         </svg>
       </button>
 
-      <nav 
-        id="nav-menu" 
-        className={`nav-menu ${!isOpen ? 'hidden' : ''}`} 
-        hidden={!isOpen} 
+      <a href="#hero" className="nav-logo" aria-label="Back to top">
+        <img
+          src="/logo_blue.svg"
+          alt="Juan Mateo logo"
+          className="logo logo-light"
+        />
+        <img
+          src="/logo_light_blue.svg"
+          alt="Juan Mateo logo"
+          className="logo logo-dark"
+        />
+      </a>
+
+      <nav
+        id="nav-menu"
+        className={`nav-menu ${!isOpen ? "hidden" : ""}`}
+        hidden={!isOpen}
         ref={menuNavRef}
       >
         <ul className="nav-list">
@@ -123,12 +138,58 @@ export default function Navigation() {
         .nav-toggle {
           position: fixed;
           top: 1.5rem;
-          left: 1.5rem;
+          left: 5.5rem;
+          z-index: 50;
           anchor-name: --nav-toggle;
         }
 
         .nav-toggle svg {
-            transition: all var(--duration-normal) var(--ease-out-expo);
+          transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+
+        .nav-logo {
+          position: fixed;
+          top: 1.5rem;
+          right: 1.5rem;
+          z-index: 50;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 2.25rem;
+          height: 2.25rem;
+          text-decoration: none;
+          line-height: 0;
+        }
+
+        .nav-logo:hover .logo {
+          transform: scale(1.06);
+        }
+
+        .logo {
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          transition:
+            opacity var(--duration-normal) var(--ease-out-expo),
+            transform var(--duration-normal) var(--ease-out-expo);
+        }
+
+        .logo-light {
+          opacity: 1;
+        }
+
+        .logo-dark {
+          opacity: 0;
+        }
+
+        html.dark .logo-light {
+          opacity: 0;
+        }
+
+        html.dark .logo-dark {
+          opacity: 1;
         }
 
         /* Menu Popover */
@@ -143,16 +204,13 @@ export default function Navigation() {
           border-radius: 1rem;
           box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
 
-          /* Fallback positioning */
           top: 1.5rem;
           left: 6rem;
 
-          /* Anchor Positioning */
           position-anchor: --nav-toggle;
           top: anchor(top);
           left: anchor(right, 1.5rem);
 
-          /* Animation */
           opacity: 0;
           transform: translateX(-10px) scale(0.95);
           transition:
@@ -166,7 +224,7 @@ export default function Navigation() {
         .nav-menu:not([hidden]) {
           opacity: 1;
           transform: translateX(0) scale(1);
-          
+
           @starting-style {
             opacity: 0;
             transform: translateX(-10px) scale(0.95);
@@ -207,7 +265,6 @@ export default function Navigation() {
           background-color: var(--color-bg-muted);
         }
 
-        /* Active State */
         .nav-link.active {
           color: var(--color-accent);
           background-color: color-mix(in srgb, var(--color-accent) 8%, transparent);
