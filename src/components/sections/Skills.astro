@@ -17,17 +17,17 @@ import Star from "../icons/Star.astro";
   <div class="container-main">
     <SectionHeader label="Expertise" title="Skills & Background" id="skills" />
 
-    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
       {
         skillCategories.map((category, categoryIndex) => (
           <div
             class="will-animate animate-fade-in-up"
             style={`animation-delay: ${150 + categoryIndex * 75}ms`}
           >
-            <h3 class="text-label mb-4 pb-2 border-b border-border">
+            <h3 class="text-label mb-5 pb-2 border-b border-border">
               {category.name}
             </h3>
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2.5">
               {category.skills.map((skill, skillIndex) => (
                 <SkillBadge
                   skill={skill}
@@ -41,53 +41,86 @@ import Star from "../icons/Star.astro";
       }
     </div>
 
-    <!-- Additional Background Info -->
-    <div class="mt-16 grid gap-12 lg:grid-cols-2">
-      <!-- Education & Certifications -->
-      <div class="space-y-12">
+    <div class="mt-20">
+      <div class="space-y-20 w-full">
+        <!-- Education -->
         <div class="will-animate animate-fade-in-up delay-300">
-          <h3 class="text-subheading mb-6 flex items-center gap-3">
+          <h3 class="text-subheading mb-7 flex items-center gap-3">
             <span class="text-accent">
               <Education class="size-6" />
             </span>
             Education
           </h3>
 
-          <div class="space-y-8">
-            <!-- Degree -->
+          <div class="space-y-10">
             <div>
-              <p class="text-label mb-4 pb-2 border-b border-border">
+              <p class="text-label mb-5 pb-2 border-b border-border">
                 Academic
               </p>
-              <div>
-                <h4 class="text-body text-primary font-medium">
-                  {education.degree}
-                </h4>
-                <p class="text-body-sm text-secondary mt-1">
-                  {education.institution}
-                </p>
-                <p class="font-mono text-xs text-muted mt-2">
-                  {education.graduated}
-                </p>
+
+              <div class="space-y-7">
+                {
+                  education.map((item) => (
+                    <div class="flex items-start justify-between gap-6">
+                      <div>
+                        <h4 class="text-body text-primary font-medium">
+                          {item.degree}
+                        </h4>
+
+                        {item.url ? (
+                          <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="link-animated text-body-sm text-secondary mt-1 inline-block"
+                          >
+                            {item.institution}
+                          </a>
+                        ) : (
+                          <p class="text-body-sm text-secondary mt-1">
+                            {item.institution}
+                          </p>
+                        )}
+                      </div>
+
+                      <p class="font-mono text-xs text-muted whitespace-nowrap pt-1">
+                        {item.graduated}
+                      </p>
+                    </div>
+                  ))
+                }
               </div>
             </div>
 
-            <!-- Certifications -->
             {
               certifications.length > 0 && (
                 <div>
-                  <p class="text-label mb-4 pb-2 border-b border-border">
+                  <p class="text-label mb-5 pb-2 border-b border-border">
                     Certifications
                   </p>
-                  <div class="space-y-4">
+
+                  <div class="space-y-5">
                     {certifications.map((cert) => (
-                      <div>
-                        <h4 class="text-body text-primary font-medium">
-                          {cert.name}
-                        </h4>
-                        <p class="font-mono text-xs text-muted mt-0.5">
-                          {cert.status}
-                        </p>
+                      <div class="flex items-start justify-between gap-6">
+                        <div>
+                          <h4 class="text-body text-primary font-medium">
+                            {cert.name}
+                          </h4>
+                          <p class="font-mono text-xs text-muted mt-0.5">
+                            {cert.status}
+                          </p>
+                        </div>
+
+                        {cert.url && (
+                          <a
+                            href={cert.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="link-animated text-body-sm text-secondary whitespace-nowrap"
+                          >
+                            Certificate
+                          </a>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -96,62 +129,109 @@ import Star from "../icons/Star.astro";
             }
           </div>
         </div>
-      </div>
 
-      <!-- Languages -->
-      <div class="will-animate animate-fade-in-up delay-400">
-        <h3 class="text-subheading mb-6 flex items-center gap-3">
-          <span class="text-accent">
-            <Globe class="size-6" />
-          </span>
-          Languages
-        </h3>
-        <div class="grid gap-6 sm:grid-cols-2">
-          {
-            languages.map((lang, i) => (
-              <div
-                class="rounded-lg bg-subtle/50 border border-transparent transition-colors duration-300"
-                style={`transition-delay: ${i * 50}ms`}
-              >
-                <p class="text-body text-primary font-medium">{lang.name}</p>
-                <p class="text-body-sm text-secondary mt-1">{lang.level}</p>
+        <!-- Languages -->
+        <div class="will-animate animate-fade-in-up delay-400">
+          <h3 class="text-subheading mb-7 flex items-center gap-3">
+            <span class="text-accent">
+              <Globe class="size-6" />
+            </span>
+            Languages
+          </h3>
+
+          <div class="grid gap-10 sm:grid-cols-2">
+            <div>
+              <p class="text-label mb-5 pb-2 border-b border-border">
+                Native / Professional Proficiency
+              </p>
+              <div class="space-y-5">
+                {
+                  languages
+                    .filter(
+                      (lang) =>
+                        lang.level === "Native" ||
+                        lang.level === "Professional Proficiency",
+                    )
+                    .map((lang) => (
+                      <div>
+                        <p class="text-body text-primary font-medium">
+                          {lang.name}
+                        </p>
+                        <p class="text-body-sm text-secondary mt-1">
+                          {lang.level}
+                        </p>
+                      </div>
+                    ))
+                }
               </div>
-            ))
-          }
-        </div>
-      </div>
+            </div>
 
-      <!-- Interests -->
-      <div class="lg:col-span-2 will-animate animate-fade-in-up delay-500">
-        <h3 class="text-subheading mb-6 flex items-center gap-3">
-          <span class="text-accent">
-            <Star class="size-6" />
-          </span>
-          Interests
-        </h3>
-        <div class="grid gap-8 sm:grid-cols-2">
-          <div>
-            <p class="text-label mb-4 pb-2 border-b border-border">Learning</p>
-            <div class="flex flex-wrap gap-2 mt-2">
-              {
-                interests.learning.map((item) => (
-                  <span class="px-3 py-1 bg-subtle rounded-full text-body-sm text-secondary hover:text-primary transition-colors cursor-default">
-                    {item}
-                  </span>
-                ))
-              }
+            <div>
+              <p class="text-label mb-5 pb-2 border-b border-border">
+                Learning
+              </p>
+              <div class="space-y-5">
+                {
+                  languages
+                    .filter(
+                      (lang) =>
+                        lang.level !== "Native" &&
+                        lang.level !== "Professional Proficiency",
+                    )
+                    .map((lang) => (
+                      <div>
+                        <p class="text-body text-primary font-medium">
+                          {lang.name}
+                        </p>
+                        <p class="text-body-sm text-secondary mt-1">
+                          {lang.level}
+                        </p>
+                      </div>
+                    ))
+                }
+              </div>
             </div>
           </div>
-          <div>
-            <p class="text-label mb-4 pb-2 border-b border-border">Personal</p>
-            <div class="flex flex-wrap gap-2 mt-2">
-              {
-                interests.personal.map((item) => (
-                  <span class="px-3 py-1 bg-subtle rounded-full text-body-sm text-secondary hover:text-primary transition-colors cursor-default">
-                    {item}
-                  </span>
-                ))
-              }
+        </div>
+
+        <!-- Interests -->
+        <div class="will-animate animate-fade-in-up delay-500">
+          <h3 class="text-subheading mb-7 flex items-center gap-3">
+            <span class="text-accent">
+              <Star class="size-6" />
+            </span>
+            Interests
+          </h3>
+
+          <div class="grid gap-10 sm:grid-cols-2">
+            <div>
+              <p class="text-label mb-5 pb-2 border-b border-border">
+                Learning
+              </p>
+              <div class="flex flex-wrap gap-2.5 mt-3">
+                {
+                  interests.learning.map((item) => (
+                    <span class="px-3 py-1 bg-subtle rounded-[10px] text-body-sm text-secondary hover:text-primary transition-colors cursor-default">
+                      {item}
+                    </span>
+                  ))
+                }
+              </div>
+            </div>
+
+            <div>
+              <p class="text-label mb-5 pb-2 border-b border-border">
+                Personal
+              </p>
+              <div class="flex flex-wrap gap-2.5 mt-3">
+                {
+                  interests.personal.map((item) => (
+                    <span class="px-3 py-1 bg-subtle rounded-[10px] text-body-sm text-secondary hover:text-primary transition-colors cursor-default">
+                      {item}
+                    </span>
+                  ))
+                }
+              </div>
             </div>
           </div>
         </div>

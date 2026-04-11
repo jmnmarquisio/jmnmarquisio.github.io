@@ -16,9 +16,7 @@ import GitHub from "../icons/GitHub.astro";
 
   <div class="container-main">
       <!-- Name - the main focus -->
-      <h1
-        class="text-display text-primary font-extrabold mb-8 will-animate animate-fade-in-up"
-      >
+      <h1 class="text-[4.2rem] md:text-[5.5rem] lg:text-[6.5rem] leading-[0.9] tracking-[-0.06em] text-primary font-extrabold mb-8 will-animate animate-fade-in-up">
         {personal.name}
       </h1>
 
@@ -34,26 +32,18 @@ import GitHub from "../icons/GitHub.astro";
 
       <!-- Social + Location - clean row -->
       <div
-        class="flex flex-wrap items-center gap-5 will-animate animate-fade-in-up delay-400"
+        class="flex flex-wrap items-center gap-3 will-animate animate-fade-in-up delay-400"
       >
         <a
           href={personal.social.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-muted hover:text-accent transition-colors duration-150"
+          class="linkedin-link text-muted transition-colors duration-200"
           aria-label="LinkedIn"
         >
           <LinkedIn class="size-5" />
-        </a>
-        <a
-          href={personal.social.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-muted hover:text-accent transition-colors duration-150"
-          aria-label="GitHub"
-        >
-          <GitHub class="size-5" />
-        </a>
+</a>
+        
         <span class="text-border">·</span>
         <a
           href={personal.locationUrl}
@@ -63,6 +53,11 @@ import GitHub from "../icons/GitHub.astro";
         >
           {personal.location}
         </a>
+        <span class="text-border">·</span>
+
+        <span class="text-body-sm text-muted">
+          European Passport
+        </span>
       </div>
     </div>
   </div>

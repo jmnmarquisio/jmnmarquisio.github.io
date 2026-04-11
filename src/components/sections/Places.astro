@@ -1,0 +1,197 @@
+<section id="places" class="section-padding">
+    <div class="container-main">
+        <p class="text-label mb-4 will-animate animate-fade-in-up">Geography</p>
+
+        <h2
+            class="text-heading text-primary will-animate animate-fade-in-up delay-100"
+        >
+            Places That Shaped Me
+        </h2>
+
+        <div class="mt-20 space-y-25">
+            <!-- Lived -->
+            <div class="will-animate animate-fade-in-up delay-200">
+                <h3 class="text-subheading text-primary mb-6">Lived</h3>
+                <div class="section-divider"></div>
+
+                <p class="places-line mt-8">URUGUAY · SPAIN · SWEDEN</p>
+
+                <div class="country-row mt-14">
+                    <div class="country-card">
+                        <div
+                            class="country-shape"
+                            style="--shape: url('/countries/uruguay.svg')"
+                        >
+                        </div>
+                    </div>
+
+                    <div class="country-card">
+                        <div
+                            class="country-shape"
+                            style="--shape: url('/countries/spain.svg')"
+                        >
+                        </div>
+                    </div>
+
+                    <div class="country-card">
+                        <div
+                            class="country-shape"
+                            style="--shape: url('/countries/sweden.svg')"
+                        >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lived for 2+ months -->
+            <div class="will-animate animate-fade-in-up delay-300">
+                <h3 class="text-subheading text-primary mb-6">
+                    Lived for 2+ months
+                </h3>
+                <div class="section-divider"></div>
+
+                <p class="places-line mt-8">
+                    UNITED STATES · SWITZERLAND · NORWAY
+                </p>
+
+                <div class="country-row mt-14">
+                    <div class="country-card">
+                        <div
+                            class="country-shape country-shape-small"
+                            style="--shape: url('/countries/usa.svg')"
+                        >
+                        </div>
+                    </div>
+
+                    <div class="country-card">
+                        <div
+                            class="country-shape country-shape-small"
+                            style="--shape: url('/countries/switzerland.svg')"
+                        >
+                        </div>
+                    </div>
+
+                    <div class="country-card">
+                        <div
+                            class="country-shape"
+                            style="--shape: url('/countries/norway.svg')"
+                        >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Worked -->
+            <div class="will-animate animate-fade-in-up delay-400">
+                <h3 class="text-subheading text-primary mb-6">
+                    Worked across all six
+                </h3>
+                <div class="section-divider"></div>
+
+                <p class="text-body text-secondary mt-8">
+                    Through internships, seasonal work, startups and assistant
+                    coaching.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .section-divider {
+        height: 1px;
+        width: 100%;
+        background: var(--color-border);
+    }
+
+    .places-line {
+        font-size: var(--text-sm);
+        line-height: 1.4;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #06162a;
+    }
+
+    :global(.dark) .places-line {
+        color: #7cffd3;
+    }
+
+    .country-row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2rem;
+        align-items: end;
+    }
+
+    .country-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .country-shape {
+        width: 100%;
+        height: 140px;
+        background-color: #05162a;
+        mask-image: var(--shape);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        -webkit-mask-image: var(--shape);
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: contain;
+        transition:
+            transform 250ms ease,
+            opacity 250ms ease,
+            background-color 250ms ease;
+        opacity: 0.95;
+    }
+
+    .country-shape-small {
+        transform: scale(0.84);
+        transform-origin: center;
+    }
+
+    :global(.dark) .country-shape {
+        background-color: #e9fbff;
+    }
+
+    .country-card:hover .country-shape {
+        opacity: 1;
+    }
+
+    .country-card:hover .country-shape-small {
+        transform: scale(0.86) translateY(-2px);
+    }
+
+    .country-card:hover .country-shape:not(.country-shape-small) {
+        transform: translateY(-2px);
+    }
+
+    .country-name {
+        font-size: var(--text-sm);
+        line-height: 1.4;
+        color: var(--color-text-secondary);
+    }
+
+    @media (max-width: 900px) {
+        .country-row {
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        .country-shape {
+            height: 120px;
+        }
+
+        .country-shape-small {
+            transform: scale(0.9);
+        }
+
+        .country-card:hover .country-shape-small {
+            transform: scale(0.92) translateY(-2px);
+        }
+    }
+</style>

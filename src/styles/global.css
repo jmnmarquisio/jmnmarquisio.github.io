@@ -640,3 +640,21 @@ body {
   animation-duration: 600ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* LinkedIn */
+.linkedin-link:hover {
+  color: hsl(213, 75%, 9%);
+}
+
+.dark .linkedin-link:hover {
+  color: hsl(160, 100%, 74%);
+}
+
+/* Places */
+.country-shape {
+  background-color: #05162a;
+}
+
+:global(.dark) .country-shape {
+  background-color: #e9fbff;
+}
