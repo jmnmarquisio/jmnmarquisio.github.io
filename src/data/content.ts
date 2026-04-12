@@ -16,6 +16,19 @@ export const personal = {
   },
 };
 
+export const about = {
+  label: "About Me",
+  title: "This is Me",
+  intro:
+    "Hi, I'm Juan Mateo Nuñez Marquisio, but everyone calls me Mateo.",
+  points: [
+    "I was born in Uruguay, and when I was very young, my family moved to Spain, where I grew up for nine years in beautiful Andalucía. In 2012, my family moved to Sweden, where I lived until 2021. After that, I spent a year and a half back in Uruguay before moving to Vigo, Spain, in 2022 to study Economics.",
+    "Before fully focusing on academics, tennis was, and still is, a huge part of my life. I competed at a high level and reached ATP-level competition, but more than that, tennis shaped the way I see life. It taught me discipline, resilience, and the constant desire to improve. It taught me how to compete, how to keep going when things get hard, and how to give everything I have to what matters.",
+    "Alongside Economics, I have also gained experience in entrepreneurship, marketing, and design, and I am now starting to build my skills in programming.",
+    "I am currently seeking new opportunities in the Zurich area from September onward, as I will be finishing my degree.",
+  ],
+};
+
 export const bio = {
   short: "I am currently completing my Bachelor's degree in Economics and will relocate to the Zurich area in August/September 2026. I am seeking entry-level, internship, or graduate opportunities in banking, finance, or business-related roles, where I can contribute from the start while continuing to learn in a demanding and international environment.",
   full: [
@@ -130,94 +143,53 @@ export interface TennisExperience {
   period: string;
   location: string;
   type: "remote" | "hybrid" | "onsite";
-  description: string;
+  description?: string;
   highlights: string[];
 }
 
-export const tennisexperiences: TennisExperience[] = [
+export const tennisExperience: TennisExperience[] = [
   {
-    role: "Tax Consultant Intern",
-    company: "Marosa VAT",
-    companyUrl: "https://marosavat.com/",
-    period: "FEB 2026 → JUN 2026",
-    location: "Onsite (Vigo, SP)",
+    role: "Tennis Coach",
+    company: "Engadin Spirit",
+    companyUrl: "https://stmoritz.gr-mountain.com/",
+    period: "JUL 2024 → AUG 2024 & JUL 2025 → AUG 2025",
+    location: "Onsite (St. Moritz, CH)",
     type: "onsite",
-    description: "Supporting EU-based and international companies with VAT compliance across multiple jurisdictions, including registrations, filings and cross-border reporting. Gaining strong exposure to EU regulation, compliance and international business operations.",
     highlights: [
-      "Built from scratch a Next.js platform interfacing (via REST APIs & WebSockets) with Big Data systems (Spark, Kafka, MinIO) for failure prediction and medium-term self-correction",
-      "Implemented real-time observability dashboards, solving the dual challenge of guiding user attention via subtle burst animations and meticulously managing performance to avoid saturating the React main thread. A consistently snappy experience was not an extra, but key for building user trust in the product",
-      "Designed and built a complete Design System (inspired by Shopify Polaris) using progressive disclosure: extremely powerful and expressive technical UI that never feels overwhelming",
-      "Developed 'physical' animations replicating analog control panels as a design nod to the industrial context this product aims to digitize",
-      "Built a type-safe, procedural system for generating complex data tables on demand (sorting, filtering via criteria pattern, pagination). The challenge wasn't just building tables, but enabling anyone (even coding agents) to spin up new ones effortlessly and consistently",
+      "Provided private coaching in St. Moritz and Silvaplana, working with international clients in prestigious hotels including Kulm Hotel and Badrutt's Palace.",
     ],
   },
   {
-    role: "Nova Talent Member",
-    company: "Nova Talent",
-    companyUrl: "https://www.novatalent.com/",
-    period: "AUG 2025 → PRESENT",
-    location: "Remote (SP)",
+    role: "Team Leader",
+    company: "SRNDPTY",
+    companyUrl: "https://srndpty.tennis/",
+    period: "JUL 2022 & JUL 2023",
+    location: "Onsite (Oslo, NO)",
+    type: "onsite",
+    highlights: [
+      "Provided private coaching in St. Moritz and Silvaplana, working with international clients in prestigious hotels including Kulm Hotel and Badrutt's Palace.",
+    ],
+  },
+  {
+    role: "Professional Tennis Player (ATP)",
+    company: "ATP",
+    companyUrl: "https://www.atptour.com/en/atp-challenger-tour",
+    period: "2021",
+    location: "Remote",
     type: "remote",
-    description: "Supporting EU-based and international companies with VAT compliance across multiple jurisdictions, including registrations, filings and cross-border reporting. Gaining strong exposure to EU regulation, compliance and international business operations.",
     highlights: [
-      "Built from scratch a Next.js platform interfacing (via REST APIs & WebSockets) with Big Data systems (Spark, Kafka, MinIO) for failure prediction and medium-term self-correction",
-      "Implemented real-time observability dashboards, solving the dual challenge of guiding user attention via subtle burst animations and meticulously managing performance to avoid saturating the React main thread. A consistently snappy experience was not an extra, but key for building user trust in the product",
-      "Designed and built a complete Design System (inspired by Shopify Polaris) using progressive disclosure: extremely powerful and expressive technical UI that never feels overwhelming",
-      "Developed 'physical' animations replicating analog control panels as a design nod to the industrial context this product aims to digitize",
-      "Built a type-safe, procedural system for generating complex data tables on demand (sorting, filtering via criteria pattern, pagination). The challenge wasn't just building tables, but enabling anyone (even coding agents) to spin up new ones effortlessly and consistently",
+      "Became a professional tennis player at 19, reaching the ATP Challenger in Montevideo. After a series of significant injuries and the financial limits of continuing on tour, I decided to change course and focus on my studies."
     ],
   },
   {
-    role: "Financial Analyst Intern",
-    company: "Denis Suárez Foundation",
-    companyUrl: "https://fundaciondenissuarez.com/",
-    period: "JUN 2025",
-    location: "Onsite (Vigo, SP)",
-    type: "onsite",
-    description: "Conducted financial and strategic analysis to identify ways to increase recurring revenue and support long-term growth. Delivered structured insights to support decision-making.",
-    highlights: [
-      "Spearheaded the development of a Self-Sovereign Identity (SSI) Android application, managing the full vertical from the Kotlin implementation to the creation of a bespoke Design System",
-      "Collaborated on both frontend and backend architectures, narrowing the gap between security requirements and user experience",
-      "Implemented efficient data anonymization algorithms in Python backends (NumPy, Pandas) for sensitive datasets",
-      "Built and optimized security-critical SPAs using React and Vue, and mentored interns to raise the team's code quality standards",
-    ],
-  },
-  {
-    role: "Founder",
-    company: "NET",
-    companyUrl: "https://net-app.io/",
-    period: "JUN 2024 → PRESENT",
-    location: "Onsite (Vigo, SP)",
-    type: "onsite",
-    description: "Building a platform that connects racket sports professionals with job opportunities. Leading product vision, market research, UX thinking and early-stage business strategy.",
-    highlights: [
-      "Designed the visual identity and implemented critical workflows in a Vue/TypeScript SPA, transforming a CLI-only tool into a modern web product",
-      "Significantly improved usability and visibility, enabling external stakeholders to leverage powerful data anonymization capabilities without technical friction",
-    ],
-  },
-  {
-    role: "Co-Founder & Marketing Manager",
-    company: "Tripnest.io / Skine.no",
-    period: "2021 → 2024",
-    location: "Remote (Oslo, NO)",
+    role: "Semi professional Tennis Player (ITF)",
+    company: "ITF",
+    companyUrl: "https://www.itftennis.com/en/",
+    period: "2019",
+    location: "Remote",
     type: "remote",
-    description: "Co-founded digital ventures and led branding, marketing, UX/UI and growth initiatives. Worked with over 50 international content creators and contributed to the visibility and expansion of a platform with 1.2M property listings.",
     highlights: [
-      "Designed the visual identity and implemented critical workflows in a Vue/TypeScript SPA, transforming a CLI-only tool into a modern web product",
-      "Significantly improved usability and visibility, enabling external stakeholders to leverage powerful data anonymization capabilities without technical friction",
-    ],
-  },
-  {
-    role: "Customer Service & VIP Lounge Staff",
-    company: "Carrasco International Airport",
-    companyUrl: "https://aeropuertodecarrasco.com.uy/en/",
-    period: "2021 → 2022",
-    location: "Onsite (Montevideo, UY)",
-    type: "onsite",
-    description: "Worked directly with customers across phone, email and web support, while assisting VIP and high-net-worth travelers in a fast-paced airport environment.",
-    highlights: [
-      "Designed the visual identity and implemented critical workflows in a Vue/TypeScript SPA, transforming a CLI-only tool into a modern web product",
-      "Significantly improved usability and visibility, enabling external stakeholders to leverage powerful data anonymization capabilities without technical friction",
+      "Began my semi-professional tennis career at 17 while completing high school remotely.",
     ],
   },
 ];
@@ -337,13 +309,17 @@ export const certifications = [
     url: "https://courses.edx.org/certificates/a2be632ab4544bfda76546ee3288e0c2",
   },
   {
-    name: "INCUVI Avanza",
-    status: "Uvigo Entreprenourship program",
-    url: "https://www.uvigo.gal/en/study/employability/entrepreneurship/incuvi-scheduling",
+    name: "TOEFL iBT",
+    status: "Score: 100/120",
+    url: "/documents/toefl-score-report.pdf"
   },
   {
-    name: "TOEFL iBT",
-    status: "TOEFL",
+    name: "INCUVI Avanza",
+    status: "Uvigo Entreprenourship program",
+  },
+  {
+    name: "Relational Databases Certification",
+    status: "In Progress",
   },
 ];
 
@@ -357,6 +333,12 @@ export const languages = [
 export const interests = {
   learning: ["Programming", "AI Tools"],
   personal: ["Tennis", "Music", "Photography", "Travel", "Films", "Pizza", "Sports"],
+};
+
+export const geography = {
+  lived: ["Uruguay", "Spain", "Sweden"],
+  livedExtended: ["United States", "Switzerland", "Norway"],
+  worked: ["Uruguay", "Spain", "Sweden", "United States", "Switzerland", "Norway"],
 };
 
 export interface Project {

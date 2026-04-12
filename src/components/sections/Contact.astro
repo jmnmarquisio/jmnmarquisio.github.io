@@ -4,55 +4,52 @@ import SectionHeader from "../ui/SectionHeader.astro";
 import ContactCard from "../ui/ContactCard.astro";
 import Email from "../icons/Email.astro";
 import LinkedIn from "../icons/LinkedIn.astro";
-import GitHub from "../icons/GitHub.astro";
+import Phone from "../icons/Phone.astro";
 ---
 
 <section id="contact" class="section-padding">
   <div class="container-main">
-      <!-- Contact Info -->
-      <div>
-        <SectionHeader label="Contact" title="Let's Connect" id="contact" />
+    <div>
+      <SectionHeader label="Contact" title="Let's Connect" id="contact" />
 
-        <p
-          class="mt-4 text-body text-secondary max-w-md will-animate animate-fade-in-up delay-200"
+      <p
+        class="mt-4 text-body text-secondary max-w-md will-animate animate-fade-in-up delay-200"
+      >
+        Available for new opportunities in the Zurich area, collaborations, or
+        simply a conversation.
+      </p>
+
+      <div
+        class="mt-8 lg:mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 will-animate animate-fade-in-up delay-300"
+      >
+        <!-- Email -->
+        <ContactCard
+          href={`mailto:${personal.email}`}
+          title="Email"
+          subtitle="Start a conversation"
         >
-          Available for new opportunities, collaborations, or just a
-          conversation about frontend, design systems, or the latest tech.
-        </p>
+          <Email class="size-6" slot="icon" />
+        </ContactCard>
 
-        <div
-          class="mt-8 lg:mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 will-animate animate-fade-in-up delay-300"
+        <!-- Phone -->
+        <ContactCard
+          href="tel:+34641746843"
+          title="Phone"
+          subtitle="+34 641 74 68 43"
         >
-          <!-- Email -->
-          <ContactCard
-            href={`mailto:${personal.email}`}
-            title="Email"
-            subtitle="Start a conversation"
-          >
-            <Email class="size-6" slot="icon" />
-          </ContactCard>
+          <Phone class="size-6" slot="icon" />
+        </ContactCard>
 
-          <!-- LinkedIn -->
-          <ContactCard
-            href={personal.social.linkedin}
-            title="LinkedIn"
-            subtitle="Professional network"
-            isExternal
-          >
-            <LinkedIn class="size-6" slot="icon" />
-          </ContactCard>
-
-          <!-- GitHub -->
-          <ContactCard
-            href={personal.social.github}
-            title="GitHub"
-            subtitle="Browse my repositories"
-            isExternal
-            colSpan={2}
-          >
-            <GitHub class="size-6" slot="icon" />
-          </ContactCard>
-        </div>
+        <!-- LinkedIn -->
+        <ContactCard
+          href={personal.social.linkedin}
+          title="LinkedIn"
+          subtitle="Professional network"
+          isExternal
+          colSpan={2}
+        >
+          <LinkedIn class="size-6" slot="icon" />
+        </ContactCard>
       </div>
     </div>
   </div>

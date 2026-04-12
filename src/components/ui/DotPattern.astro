@@ -1,14 +1,66 @@
 ---
-/**
- * Dot matrix background pattern overlay.
- * Used in Experience and Projects sections.
- */
 interface Props {
-  class?: string;
+  reverse?: boolean;
 }
 
-const { class: className = "" } = Astro.props;
+const { reverse = false } = Astro.props;
 ---
 
-<div class:list={["absolute inset-0 bg-dots pointer-events-none", className]}>
+<div
+  class={`dot-pattern ${reverse ? "dot-pattern--reverse" : ""}`}
+  aria-hidden="true"
+>
+  {
+    Array.from({ length: 180 }).map((_, i) => (
+      <span class="dot" style={`animation-delay: ${i * 0.02}s;`} />
+    ))
+  }
 </div>
+
+<style>
+  .dot-pattern {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 22px;
+    pointer-events: none;
+    opacity: 0.28;
+  }
+
+  .dot {
+    width: 2px;
+    height: 2px;
+    border-radius: 9999px;
+    background: var(--color-border);
+    animation: dot-fade 4s ease-in-out infinite;
+  }
+
+  .dot-pattern--reverse .dot {
+    animation-name: dot-fade-reverse;
+  }
+
+  @keyframes dot-fade {
+    0%,
+    100% {
+      opacity: 0.08;
+      transform: translateY(-2px);
+    }
+    50% {
+      opacity: 0.45;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes dot-fade-reverse {
+    0%,
+    100% {
+      opacity: 0.08;
+      transform: translateY(2px);
+    }
+    50% {
+      opacity: 0.45;
+      transform: translateY(0);
+    }
+  }
+</style>

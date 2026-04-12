@@ -68,13 +68,13 @@
 }
 
 .dark {
-  --color-bg: hsl(213, 75%, 9%);
-  --color-bg-subtle: hsl(211, 67%, 17%);
-  --color-bg-muted: hsl(205, 45%, 22%);
+  --color-bg: hsl(214, 62%, 8%);
+  --color-bg-subtle: hsl(214, 62%, 9.5%);
+  --color-bg-muted: hsl(214, 58%, 12%);
 
   --color-text: hsl(191, 100%, 96%);
-  --color-text-secondary: hsl(190, 60%, 85%);
-  --color-text-muted: hsl(199, 20%, 65%);
+  --color-text-secondary: hsl(190, 52%, 84%);
+  --color-text-muted: hsl(199, 18%, 64%);
 
   --color-accent: hsl(160, 100%, 74%);
   --color-accent-muted: hsl(160, 55%, 45%);
@@ -97,16 +97,16 @@
   --color-amber: hsl(160, 100%, 74%);
   --color-amber-muted: hsl(160, 55%, 45%);
 
-  --color-highlight: hsl(199, 54%, 20%);
-  --color-border: hsl(211, 30%, 28%);
+  --color-highlight: hsl(199, 44%, 18%);
+  --color-border: hsl(211, 24%, 24%);
 
-  --color-accent-badge: hsl(213, 75%, 9%);
+  --color-accent-badge: hsl(213, 68%, 7%);
   --color-warm-badge: hsl(191, 100%, 96%);
-  --color-pink-badge: hsl(213, 75%, 9%);
+  --color-pink-badge: hsl(213, 68%, 7%);
   --color-cyan-badge: hsl(191, 100%, 96%);
-  --color-emerald-badge: hsl(213, 75%, 9%);
+  --color-emerald-badge: hsl(213, 68%, 7%);
   --color-violet-badge: hsl(191, 100%, 96%);
-  --color-amber-badge: hsl(213, 75%, 9%);
+  --color-amber-badge: hsl(213, 68%, 7%);
 }
 
 /* ============================================
@@ -254,15 +254,15 @@ body {
   color: var(--color-amber-badge);
 }
 
-.bg-base {
+.bg-app-base {
   background-color: var(--color-bg);
 }
 
-.bg-subtle {
+.bg-app-subtle {
   background-color: var(--color-bg-subtle);
 }
 
-.bg-muted {
+.bg-app-muted {
   background-color: var(--color-bg-muted);
 }
 

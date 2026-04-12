@@ -50,14 +50,12 @@ const delay = 200 + index * 150;
               href={experience.companyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="font-mono text-body-sm text-accent link-underline"
+              class="text-body-sm text-accent link-underline"
             >
               {experience.company}
             </a>
           ) : (
-            <span class="font-mono text-body-sm text-accent">
-              {experience.company}
-            </span>
+            <span class="text-body-sm text-accent">{experience.company}</span>
           )
         }
         <span class="text-muted">·</span>

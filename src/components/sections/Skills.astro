@@ -5,6 +5,7 @@ import {
   languages,
   certifications,
   interests,
+  geography,
 } from "../../data/content";
 import SkillBadge from "../ui/SkillBadge.astro";
 import SectionHeader from "../ui/SectionHeader.astro";
@@ -15,7 +16,12 @@ import Star from "../icons/Star.astro";
 
 <section id="skills" class="section-padding">
   <div class="container-main">
-    <SectionHeader label="Expertise" title="Skills & Background" id="skills" />
+    <SectionHeader
+      label="Expertise"
+      title="Skills & Background"
+      id="skills"
+      showAnchor={false}
+    />
 
     <div class="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
       {
@@ -83,7 +89,7 @@ import Star from "../icons/Star.astro";
                         )}
                       </div>
 
-                      <p class="font-mono text-xs text-muted whitespace-nowrap pt-1">
+                      <p class="text-xs text-muted whitespace-nowrap pt-1">
                         {item.graduated}
                       </p>
                     </div>
@@ -106,9 +112,7 @@ import Star from "../icons/Star.astro";
                           <h4 class="text-body text-primary font-medium">
                             {cert.name}
                           </h4>
-                          <p class="font-mono text-xs text-muted mt-0.5">
-                            {cert.status}
-                          </p>
+                          <p class="text-xs text-muted mt-0.5">{cert.status}</p>
                         </div>
 
                         {cert.url && (
@@ -129,7 +133,57 @@ import Star from "../icons/Star.astro";
             }
           </div>
         </div>
+        <!-- Geography -->
+        <div class="will-animate animate-fade-in-up delay-600">
+          <h3 class="text-subheading mb-7 flex items-center gap-3">
+            <span class="text-accent">
+              <Globe class="size-6" />
+            </span>
+            Geography
+          </h3>
+          <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            <div>
+              <p class="text-label mb-5 pb-2 border-b border-border">Lived</p>
+              <div class="flex flex-wrap gap-2.5 mt-3">
+                {
+                  geography.lived.map((item) => (
+                    <span class="px-3 py-1 bg-subtle rounded-[10px] text-body-sm text-secondary hover:text-primary transition-colors cursor-default">
+                      {item}
+                    </span>
+                  ))
+                }
+              </div>
+            </div>
 
+            <div>
+              <p class="text-label mb-5 pb-2 border-b border-border">
+                Lived for 2+ months
+              </p>
+              <div class="flex flex-wrap gap-2.5 mt-3">
+                {
+                  geography.livedExtended.map((item) => (
+                    <span class="px-3 py-1 bg-subtle rounded-[10px] text-body-sm text-secondary hover:text-primary transition-colors cursor-default">
+                      {item}
+                    </span>
+                  ))
+                }
+              </div>
+            </div>
+
+            <div>
+              <p class="text-label mb-5 pb-2 border-b border-border">Worked</p>
+              <div class="flex flex-wrap gap-2.5 mt-3">
+                {
+                  geography.worked.map((item) => (
+                    <span class="px-3 py-1 bg-subtle rounded-[10px] text-body-sm text-secondary hover:text-primary transition-colors cursor-default">
+                      {item}
+                    </span>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Languages -->
         <div class="will-animate animate-fade-in-up delay-400">
           <h3 class="text-subheading mb-7 flex items-center gap-3">

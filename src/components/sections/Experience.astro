@@ -2,23 +2,21 @@
 import { experiences } from "../../data/content";
 import TimelineItem from "../ui/TimelineItem.astro";
 import SectionHeader from "../ui/SectionHeader.astro";
-import DotPattern from "../ui/DotPattern.astro";
 ---
 
 <section
   id="experience"
-  class="section-padding bg-subtle relative overflow-hidden"
+  class="section-padding bg-app-subtle relative overflow-hidden"
 >
-  <DotPattern />
-
   <div class="container-main relative">
     <SectionHeader
       label="Experience"
       title="Where I've Worked"
       id="experience"
+      showAnchor={false}
     />
 
-    <div class="mt-12">
+    <div class="mt-12 relative experience-timeline-wrap">
       {
         experiences.map((exp, i) => (
           <TimelineItem
@@ -28,6 +26,62 @@ import DotPattern from "../ui/DotPattern.astro";
           />
         ))
       }
+
+      <!-- Continuation indicator -->
+      <div class="timeline-scroll-indicator" aria-hidden="true">
+        <div class="timeline-scroll-track">
+          <div class="timeline-scroll-line"></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  .experience-timeline-wrap {
+    position: relative;
+  }
+
+  .timeline-scroll-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: -150px;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 60px; /* o lo que uses */
+    pointer-events: none;
+  }
+
+  .timeline-scroll-track {
+    width: 1px;
+    height: 56px;
+    background: var(--color-border);
+    position: relative;
+    overflow: hidden;
+    opacity: 0.9;
+  }
+
+  .timeline-scroll-line {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background: var(--color-accent);
+    animation: timeline-scroll-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes timeline-scroll-pulse {
+    0%,
+    100% {
+      transform: translateY(-100%);
+    }
+    50% {
+      transform: translateY(100%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .timeline-scroll-indicator {
+      display: none;
+    }
+  }
+</style>
