@@ -6,12 +6,17 @@ import {
   certifications,
   interests,
   geography,
+  volunteer,
+  honors,
 } from "../../data/content";
 import SkillBadge from "../ui/SkillBadge.astro";
 import SectionHeader from "../ui/SectionHeader.astro";
 import Education from "../icons/Education.astro";
 import Globe from "../icons/Globe.astro";
 import Star from "../icons/Star.astro";
+import VolunteerIcon from "../icons/Volunteer.astro";
+import HonorsIcon from "../icons/Honors.astro";
+import LanguageIcon from "../icons/Language.astro";
 ---
 
 <section id="skills" class="section-padding">
@@ -133,6 +138,7 @@ import Star from "../icons/Star.astro";
             }
           </div>
         </div>
+
         <!-- Geography -->
         <div class="will-animate animate-fade-in-up delay-600">
           <h3 class="text-subheading mb-7 flex items-center gap-3">
@@ -147,7 +153,7 @@ import Star from "../icons/Star.astro";
               <div class="flex flex-wrap gap-2.5 mt-3">
                 {
                   geography.lived.map((item) => (
-                    <span class="px-3 py-1 bg-subtle rounded-[10px] text-body-sm text-secondary hover:text-primary transition-colors cursor-default">
+                    <span class="inline-flex items-center px-3 py-1.5 rounded-[10px] bg-app-muted text-body-sm text-secondary transition-colors duration-200 hover:text-primary cursor-default">
                       {item}
                     </span>
                   ))
@@ -162,7 +168,7 @@ import Star from "../icons/Star.astro";
               <div class="flex flex-wrap gap-2.5 mt-3">
                 {
                   geography.livedExtended.map((item) => (
-                    <span class="px-3 py-1 bg-subtle rounded-[10px] text-body-sm text-secondary hover:text-primary transition-colors cursor-default">
+                    <span class="inline-flex items-center px-3 py-1.5 rounded-[10px] bg-app-muted text-body-sm text-secondary transition-colors duration-200 hover:text-primary cursor-default">
                       {item}
                     </span>
                   ))
@@ -175,7 +181,7 @@ import Star from "../icons/Star.astro";
               <div class="flex flex-wrap gap-2.5 mt-3">
                 {
                   geography.worked.map((item) => (
-                    <span class="px-3 py-1 bg-subtle rounded-[10px] text-body-sm text-secondary hover:text-primary transition-colors cursor-default">
+                    <span class="inline-flex items-center px-3 py-1.5 rounded-[10px] bg-app-muted text-body-sm text-secondary transition-colors duration-200 hover:text-primary cursor-default">
                       {item}
                     </span>
                   ))
@@ -184,11 +190,12 @@ import Star from "../icons/Star.astro";
             </div>
           </div>
         </div>
+
         <!-- Languages -->
         <div class="will-animate animate-fade-in-up delay-400">
           <h3 class="text-subheading mb-7 flex items-center gap-3">
             <span class="text-accent">
-              <Globe class="size-6" />
+              <LanguageIcon class="size-6" />
             </span>
             Languages
           </h3>
@@ -265,7 +272,7 @@ import Star from "../icons/Star.astro";
               <div class="flex flex-wrap gap-2.5 mt-3">
                 {
                   interests.learning.map((item) => (
-                    <span class="px-3 py-1 bg-subtle rounded-[10px] text-body-sm text-secondary hover:text-primary transition-colors cursor-default">
+                    <span class="inline-flex items-center px-3 py-1.5 rounded-[10px] bg-app-muted text-body-sm text-secondary transition-colors duration-200 hover:text-primary cursor-default">
                       {item}
                     </span>
                   ))
@@ -280,12 +287,122 @@ import Star from "../icons/Star.astro";
               <div class="flex flex-wrap gap-2.5 mt-3">
                 {
                   interests.personal.map((item) => (
-                    <span class="px-3 py-1 bg-subtle rounded-[10px] text-body-sm text-secondary hover:text-primary transition-colors cursor-default">
+                    <span class="inline-flex items-center px-3 py-1.5 rounded-[10px] bg-app-muted text-body-sm text-secondary transition-colors duration-200 hover:text-primary cursor-default">
                       {item}
                     </span>
                   ))
                 }
               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Volunteer -->
+        <div class="will-animate animate-fade-in-up delay-350">
+          <h3 class="text-subheading mb-7 flex items-center gap-3">
+            <span class="text-accent">
+              <VolunteerIcon class="size-6" />
+            </span>
+            Volunteering
+          </h3>
+
+          <div>
+            <p class="text-label mb-5 pb-2 border-b border-border">
+              Community & Service
+            </p>
+
+            <div class="space-y-7">
+              {
+                (volunteer ?? []).map((item) => (
+                  <div class="flex items-start justify-between gap-6">
+                    <div>
+                      <h4 class="text-body text-primary font-medium">
+                        {item.role}
+                      </h4>
+
+                      {item.url ? (
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="link-animated text-body-sm text-secondary mt-1 inline-block"
+                        >
+                          {item.organization}
+                        </a>
+                      ) : (
+                        <p class="text-body-sm text-secondary mt-1">
+                          {item.organization}
+                        </p>
+                      )}
+
+                      {item.description && (
+                        <p class="text-xs text-muted mt-2 max-w-xl">
+                          {item.description}
+                        </p>
+                      )}
+                    </div>
+
+                    <p class="text-xs text-muted whitespace-nowrap pt-1">
+                      {item.period}
+                    </p>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- Honors & Awards -->
+        <div class="will-animate animate-fade-in-up delay-375">
+          <h3 class="text-subheading mb-7 flex items-center gap-3">
+            <span class="text-accent">
+              <HonorsIcon class="size-6" />
+            </span>
+            Honors & Awards
+          </h3>
+
+          <div>
+            <p class="text-label mb-5 pb-2 border-b border-border">
+              Recognition
+            </p>
+
+            <div class="space-y-7">
+              {
+                (honors ?? []).map((item) => (
+                  <div class="flex items-start justify-between gap-6">
+                    <div>
+                      <h4 class="text-body text-primary font-medium">
+                        {item.title}
+                      </h4>
+
+                      {item.url ? (
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="link-animated text-body-sm text-secondary mt-1 inline-block"
+                        >
+                          {item.issuer}
+                        </a>
+                      ) : (
+                        <p class="text-body-sm text-secondary mt-1">
+                          {item.issuer}
+                        </p>
+                      )}
+
+                      {item.description && (
+                        <p class="text-xs text-muted mt-2 max-w-xl">
+                          {item.description}
+                        </p>
+                      )}
+                    </div>
+
+                    <p class="text-xs text-muted whitespace-nowrap pt-1">
+                      {item.period}
+                    </p>
+                  </div>
+                ))
+              }
             </div>
           </div>
         </div>

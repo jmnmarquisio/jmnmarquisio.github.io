@@ -9,7 +9,7 @@ interface Props {
 
 const {
   title = "Juan Mateo Núñez Marquisio - Calm Ambition",
-description = "Final-year Economics student relocating to Zurich in 2026. International profile with experience across finance, business, entrepreneurship and elite sport.",
+  description = "Final-year Economics student relocating to Zurich in 2026. International profile with experience across finance, business, entrepreneurship and elite sport.",
 } = Astro.props;
 
 import Navigation from "../components/Navigation.tsx";
@@ -61,7 +61,9 @@ import Analytics from "@vercel/analytics/astro";
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
     />
 
     <!-- View Transitions -->
@@ -80,9 +82,6 @@ import Analytics from "@vercel/analytics/astro";
     </script>
 
     <!-- Global Styles -->
-    <style is:global>
-      @import "../styles/global.css";
-    </style>
   </head>
   <body class="min-h-screen relative">
     <ThemeToggle client:load />

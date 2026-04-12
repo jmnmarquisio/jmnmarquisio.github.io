@@ -53,8 +53,7 @@ export default function Navigation() {
     { href: "#about", label: "02", text: ". /about", id: "about" },
     { href: "#experience", label: "03", text: ". /exp", id: "experience" },
     { href: "#skills", label: "04", text: ". /skills", id: "skills" },
-    { href: "#projects", label: "05", text: ". /work", id: "projects" },
-    { href: "#contact", label: "06", text: ". /contact", id: "contact" },
+    { href: "#contact", label: "05", text: ". /contact", id: "contact" },
   ];
 
   return (
@@ -138,7 +137,7 @@ export default function Navigation() {
         .nav-toggle {
           position: fixed;
           top: 1.5rem;
-          left: 5.5rem;
+          left: 5rem;
           z-index: 50;
           anchor-name: --nav-toggle;
         }
@@ -246,7 +245,7 @@ export default function Navigation() {
           align-items: center;
           gap: 0.75rem;
           padding: 0.5rem 0.75rem;
-          font-family: var(--font-mono);
+          font-family: var(--font-main);
           font-size: var(--text-sm);
           color: var(--color-text-muted);
           text-decoration: none;

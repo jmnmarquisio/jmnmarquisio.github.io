@@ -7,13 +7,18 @@ import LinkedIn from "../icons/LinkedIn.astro";
 import Phone from "../icons/Phone.astro";
 ---
 
-<section id="contact" class="section-padding">
+<section id="contact" class="section-padding bg-app-subtle">
   <div class="container-main">
     <div>
-      <SectionHeader label="Contact" title="Let's Connect" id="contact" />
+      <SectionHeader
+        label="Contact"
+        title="Let's Connect"
+        id="contact"
+        showAnchor={false}
+      />
 
       <p
-        class="mt-4 text-body text-secondary max-w-md will-animate animate-fade-in-up delay-200"
+        class="mt-4 text-body text-secondary will-animate animate-fade-in-up delay-200"
       >
         Available for new opportunities in the Zurich area, collaborations, or
         simply a conversation.
@@ -22,7 +27,6 @@ import Phone from "../icons/Phone.astro";
       <div
         class="mt-8 lg:mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 will-animate animate-fade-in-up delay-300"
       >
-        <!-- Email -->
         <ContactCard
           href={`mailto:${personal.email}`}
           title="Email"
@@ -31,7 +35,6 @@ import Phone from "../icons/Phone.astro";
           <Email class="size-6" slot="icon" />
         </ContactCard>
 
-        <!-- Phone -->
         <ContactCard
           href="tel:+34641746843"
           title="Phone"
@@ -40,7 +43,6 @@ import Phone from "../icons/Phone.astro";
           <Phone class="size-6" slot="icon" />
         </ContactCard>
 
-        <!-- LinkedIn -->
         <ContactCard
           href={personal.social.linkedin}
           title="LinkedIn"

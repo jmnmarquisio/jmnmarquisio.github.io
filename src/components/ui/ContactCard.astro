@@ -1,8 +1,4 @@
 ---
-/**
- * Reusable contact card with icon, title, subtitle, and external link styling.
- * Extracted from Contact section where 3 similar cards were defined inline.
- */
 import ExternalArrow from "../icons/ExternalArrow.astro";
 
 interface Props {
@@ -40,24 +36,27 @@ const colSpanClass = colSpan === 2 ? "md:col-span-2" : "md:col-span-1";
   <div class="flex items-center justify-between">
     <div class="flex items-center gap-4">
       <div
-        class="text-secondary group-hover:text-accent transition-colors duration-300"
+        class="!text-secondary transition-colors duration-300 group-hover:!text-primary"
       >
         <slot name="icon" />
       </div>
+
       <h3
-        class="text-subheading text-secondary group-hover:text-accent transition-colors duration-300"
+        class="text-subheading !text-secondary transition-colors duration-300 group-hover:!text-primary"
       >
         {title}
       </h3>
     </div>
+
     <div
-      class="opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 text-accent"
+      class="opacity-40 text-accent transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:!text-primary"
     >
       <ExternalArrow class="size-8" />
     </div>
   </div>
+
   <p
-    class="text-body-sm text-label mt-1 group-hover:text-primary transition-colors duration-300 pl-10"
+    class="mt-1 pl-10 text-body-sm !text-muted transition-colors duration-300 group-hover:!text-primary"
   >
     {subtitle}
   </p>

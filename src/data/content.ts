@@ -4,7 +4,7 @@
 export const personal = {
   name: "Juan Mateo Núñez Marquisio",
   title: "Economics Graduate",
-  subtitle: "Former ATP Player | Final-year Economics student | Nova Talent",
+  subtitle: "Former ATP Player | Final-year Economics student | Nova Member",
   tagline: "Bridging design and code",
   email: "jmn.marquisio@gmail.com",
   phone: "+34 641 74 68 43",
@@ -18,14 +18,13 @@ export const personal = {
 
 export const about = {
   label: "About Me",
-  title: "This is Me",
+  title: "Hi, Mateo here!",
   intro:
-    "Hi, I'm Juan Mateo Nuñez Marquisio, but everyone calls me Mateo.",
+    "I was born in Uruguay and grew up in beautiful Andalucía, in southern Spain, where I lived for nine years. In 2012, my family moved to Sweden, where I lived until 2021. After spending a year and a half back in Uruguay, I moved to Vigo in 2022 to study Economics.",
   points: [
-    "I was born in Uruguay, and when I was very young, my family moved to Spain, where I grew up for nine years in beautiful Andalucía. In 2012, my family moved to Sweden, where I lived until 2021. After that, I spent a year and a half back in Uruguay before moving to Vigo, Spain, in 2022 to study Economics.",
-    "Before fully focusing on academics, tennis was, and still is, a huge part of my life. I competed at a high level and reached ATP-level competition, but more than that, tennis shaped the way I see life. It taught me discipline, resilience, and the constant desire to improve. It taught me how to compete, how to keep going when things get hard, and how to give everything I have to what matters.",
-    "Alongside Economics, I have also gained experience in entrepreneurship, marketing, and design, and I am now starting to build my skills in programming.",
-    "I am currently seeking new opportunities in the Zurich area from September onward, as I will be finishing my degree.",
+    "Before academics became my main focus, tennis was the center of my life. I competed at a high level for many years, and reached ATP Challenger-level competition at 19.",
+    "Alongside my degree in Economics, I have built experience in entrepreneurship, marketing, branding, and design, and I am currently developing my skills in programming.",
+    "Today, I am 24 years old, finishing my Economics degree, and focused on building the next chapter of my life.",
   ],
 };
 
@@ -65,17 +64,6 @@ export const experiences: Experience[] = [
       "Managing VAT compliance for companies across Europe in multi-jurisdiction, deadline-driven environments.",
       "Working across VAT returns, annual VAT filings, ledgers, SAFT and Intrastat reporting, while maintaining daily communication with clients by phone, email and chat.",
       "The role has strengthened my Excel skills, attention to detail, and ability to stay calm and accurate under pressure, especially when key information arrives close to filing deadlines.",
-    ],
-  },
-  {
-    role: "Selected Nova Member",
-    company: "Nova Talent",
-    companyUrl: "https://www.novatalent.com/",
-    period: "AUG 2025 → PRESENT",
-    location: "Remote",
-    type: "remote",
-    highlights: [
-      "Selected member of Nova Talent, a global professional network that brings together high-potential talent through mentoring, curated introductions, events and exclusive communities.",
     ],
   },
   {
@@ -141,8 +129,8 @@ export interface TennisExperience {
   company: string;
   companyUrl?: string;
   period: string;
-  location: string;
-  type: "remote" | "hybrid" | "onsite";
+  location?: string;
+  type?: "remote" | "hybrid" | "onsite";
   description?: string;
   highlights: string[];
 }
@@ -175,8 +163,6 @@ export const tennisExperience: TennisExperience[] = [
     company: "ATP",
     companyUrl: "https://www.atptour.com/en/atp-challenger-tour",
     period: "2021",
-    location: "Remote",
-    type: "remote",
     highlights: [
       "Became a professional tennis player at 19, reaching the ATP Challenger in Montevideo. After a series of significant injuries and the financial limits of continuing on tour, I decided to change course and focus on my studies."
     ],
@@ -186,8 +172,6 @@ export const tennisExperience: TennisExperience[] = [
     company: "ITF",
     companyUrl: "https://www.itftennis.com/en/",
     period: "2019",
-    location: "Remote",
-    type: "remote",
     highlights: [
       "Began my semi-professional tennis career at 17 while completing high school remotely.",
     ],
@@ -340,6 +324,49 @@ export const geography = {
   livedExtended: ["United States", "Switzerland", "Norway"],
   worked: ["Uruguay", "Spain", "Sweden", "United States", "Switzerland", "Norway"],
 };
+
+export const volunteer = [
+  {
+    role: "Volunteer Assistant Tennis Coach",
+    organization: "Macalester College - Athletics",
+    period: "FALL 2025",
+    url: "https://athletics.macalester.edu/index.aspx",
+    description:
+      "Supported the head coach and assistant coach with both the men's and women's teams during training sessions and matches."
+  },
+  {
+    role: "Class Representative",
+    organization: "Universidade de Vigo",
+    period: "2022 → 2024",
+    url: "https://www.uvigo.gal/en",
+    description:
+      "Elected class representative for the Economics cohort for two consecutive years."
+  }
+];
+
+export const honors = [
+  {
+    title: "Selected Nova Member",
+    issuer: "Nova",
+    period: "2025",
+    description: "Recognized as a selected member of the Nova Talent network.",
+    url: "https://www.novatalent.com/"
+  },
+  {
+    title: "Academic Excellence Award - The Ángeles Ruiz Robles Award",
+    issuer: "Xunta de Galicia",
+    period: "2022 → 2023",
+    description: "Awarded for achieving the highest GPA in my cohort.",
+    url: "https://www.xunta.gal/es/notas-de-prensa/-/nova/80229/xunta-galicia-convoca-los-premios-angela-ruiz-robles-excelencia-academica-grados"
+  },
+  {
+    title: "Academic Excellence Award - The Ángeles Ruiz Robles Award",
+    issuer: "Xunta de Galicia",
+    period: "2023 → 2024",
+    description: "Awarded for achieving the highest GPA in my cohort.",
+    url: "https://www.xunta.gal/es/notas-de-prensa/-/nova/80229/xunta-galicia-convoca-los-premios-angela-ruiz-robles-excelencia-academica-grados"
+  }
+];
 
 export interface Project {
   title: string;

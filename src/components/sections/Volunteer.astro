@@ -1,0 +1,46 @@
+---
+import { volunteer } from "../../data/content";
+import VolunteerIcon from "../icons/Volunteer.astro";
+---
+
+<section id="volunteer" class="section-padding">
+    <div class="container-main">
+        <div class="max-w-4xl">
+            <div class="mb-12">
+                <p class="text-label mb-4">Volunteering</p>
+                <h2 class="text-heading text-primary flex items-center gap-3">
+                    <span class="text-accent">
+                        <VolunteerIcon class="size-7" />
+                    </span>
+                    Volunteer Work
+                </h2>
+            </div>
+
+            <div class="space-y-10">
+                {
+                    volunteer.map((item) => (
+                        <div class="border-t border-border pt-6">
+                            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
+                                <div>
+                                    <h3 class="text-subheading text-primary font-semibold">
+                                        {item.role}
+                                    </h3>
+                                    <p class="text-body text-secondary mt-1">
+                                        {item.organization}
+                                    </p>
+                                    <p class="text-body-sm text-muted mt-3 max-w-2xl">
+                                        {item.description}
+                                    </p>
+                                </div>
+
+                                <div class="text-body-sm text-muted whitespace-nowrap">
+                                    {item.period}
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>

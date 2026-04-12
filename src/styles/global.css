@@ -22,13 +22,13 @@
 
   --color-bg: hsl(191, 100%, 96%);
   --color-bg-subtle: hsl(191, 60%, 92%);
-  --color-bg-muted: hsl(191, 35%, 86%);
+  --color-bg-muted: hsl(191, 60%, 92%);
 
   --color-text: hsl(213, 75%, 9%);
   --color-text-secondary: hsl(211, 67%, 17%);
   --color-text-muted: hsl(199, 20%, 40%);
 
-  --color-accent: hsl(199, 54%, 36%);
+  --color-accent: hsl(214, 62%, 8%);
   --color-accent-muted: hsl(199, 40%, 72%);
 
   --color-warm: hsl(160, 100%, 74%);
@@ -181,7 +181,7 @@ body {
   font-size: var(--text-xs);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
 }
 
 /* Color utilities */
