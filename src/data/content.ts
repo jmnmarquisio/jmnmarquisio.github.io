@@ -191,25 +191,25 @@ export interface SkillCategory {
 
 export const skillCategories: SkillCategory[] = [
   {
-    name: "Data & AI tools",
+    name: "Core tools",
     skills: [
       { name: "Excel" },
       { name: "ChatGPT", url: "https://chatgpt.com/" },
-    ],
-    accent: "neutral",
-  },
-  {
-    name: "Design & UX",
-    skills: [
+      { name: "Notion", url: "https://www.notion.com/" },
       { name: "Figma", url: "https://www.figma.com" },
       { name: "Adobe", url: "https://www.adobe.com/" },
+
     ],
     accent: "neutral",
   },
   {
-    name: "Others",
+    name: "Learning tools",
     skills: [
-      { name: "Notion", url: "https://www.notion.com/" },
+      { name: "Github", url: "https://github.com/" },
+      { name: "VS Code", url: "https://code.visualstudio.com/" },
+      { name: "Jira", url: "https://www.atlassian.com/software/jira" },
+      { name: "Python" },
+      { name: "SQL" },
     ],
     accent: "neutral",
   },
@@ -240,16 +240,7 @@ export const skillCategories: SkillCategory[] = [
     ],
     accent: "warm",
   },
-  {
-    name: "Learning",
-    skills: [
-      "Python",
-      "GitHub",
-      "VS Code",
-      "SQL",
-    ],
-    accent: "warm",
-  },
+
 ];
 
 export interface EducationItem {
