@@ -1,0 +1,77 @@
+<section class="tennis-video-section" aria-label="Tennis highlight video">
+    <div class="tennis-video-shell">
+        <div class="tennis-video-frame">
+            <video
+                class="tennis-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+            >
+                <source src="/videos/tennis.mp4" type="video/mp4" />
+            </video>
+            <div class="tennis-video-overlay" aria-hidden="true"></div>
+            <div class="tennis-video-vignette" aria-hidden="true"></div>
+        </div>
+    </div>
+</section>
+<style>
+    .tennis-video-section {
+        padding: 5rem 0 5rem;
+    }
+    .tennis-video-shell {
+        width: min(100%, 1100px);
+        margin: 0 auto;
+        padding: 0 3rem;
+    }
+    .tennis-video-frame {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        aspect-ratio: 16 / 8.5;
+        box-shadow: rgba(6, 22, 42, 0.12);
+    }
+    .tennis-video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+    .tennis-video-overlay,
+    .tennis-video-vignette {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+    } /* Light mode */
+    .tennis-video-overlay {
+        mix-blend-mode: multiply;
+        opacity: 0.85;
+    }
+
+    :global(html.dark) .tennis-video-vignette,
+    :global([data-theme="dark"]) .tennis-video-vignette {
+        background:
+            radial-gradient(
+                circle at center,
+                transparent 22%,
+                rgba(6, 22, 42, 0.36) 100%
+            ),
+            linear-gradient(
+                90deg,
+                rgba(6, 22, 42, 0.18) 0%,
+                transparent 18%,
+                transparent 82%,
+                rgba(6, 22, 42, 0.18) 100%
+            );
+    }
+    @media (max-width: 768px) {
+        .tennis-video-shell {
+            padding: 0 3rem;
+        }
+        .tennis-video-frame {
+            border-radius: 12px;
+            aspect-ratio: 16 / 10;
+        }
+    }
+</style>
