@@ -4,8 +4,7 @@
 export const personal = {
   name: "Juan Mateo Núñez Marquisio",
   title: "Economics Graduate",
-  subtitle: "Former ATP Player | Final-year Economics student | Nova Member",
-  tagline: "Bridging design and code",
+  subtitle: "Former ATP Player | Entrepreneur | Design | Nova Member",
   email: "jmn.marquisio@gmail.com",
   phone: "+34 641 74 68 43",
   location: "Vigo, Spain",
@@ -210,6 +209,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Jira", url: "https://www.atlassian.com/software/jira" },
       { name: "Python" },
       { name: "SQL" },
+      { name: "Claude" }
     ],
     accent: "neutral",
   },
