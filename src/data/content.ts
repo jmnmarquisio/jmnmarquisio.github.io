@@ -4,7 +4,7 @@
 export const personal = {
   name: "Juan Mateo Núñez Marquisio",
   title: "Economics Graduate",
-  subtitle: "Former ATP Player | Marketing | Nova Member",
+  subtitle: "Former ATP Player | Marketing | Design | Nova Member",
   email: "jmn.marquisio@gmail.com",
   phone: "+34 641 74 68 43",
   location: "Vigo, Spain",
