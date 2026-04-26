@@ -303,7 +303,7 @@ export const certifications = [
   },
   {
     name: "Relational Databases Certification",
-    status: "In Progress",
+    status: "FreeCodeCamp - In Progress",
   },
 ];
 
