@@ -289,8 +289,17 @@ export const certifications = [
     url: "/documents/toefl-score-report.pdf"
   },
   {
+    name: "Digital Marketing",
+    status: "ADM",
+    url: "https://test.adm.com.uy/"
+  },
+  {
     name: "INCUVI Avanza",
     status: "Uvigo Entreprenourship program",
+  },
+  {
+    name: "Graphic Design & Visual Content",
+    status: "Instituto Bios",
   },
   {
     name: "Relational Databases Certification",
@@ -393,5 +402,4 @@ export const projects: Project[] = [
     github: "https://github.com/JaviVinnas/technical-assignment-kannact",
   },
 ];
-
 
