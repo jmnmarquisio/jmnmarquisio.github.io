@@ -3,8 +3,8 @@
 
 export const personal = {
   name: "Juan Mateo Núñez Marquisio",
-  title: "Economics Graduate",
-  subtitle: "Former ATP Player | Marketing | Design | Nova Member",
+  title: "Final-year Economics Student",
+  subtitle: "Former ATP Player",
   email: "jmn.marquisio@gmail.com",
   phone: "+34 641 74 68 43",
   location: "Vigo, Spain",
@@ -19,11 +19,12 @@ export const about = {
   label: "About Me",
   title: "Hi, Mateo here!",
   intro:
-    "I was born in Uruguay and grew up in beautiful Andalucía, in southern Spain, where I lived for nine years. In 2012, my family moved to Sweden, where I lived until 2021. After spending a year and a half back in Uruguay, I moved to Vigo in 2022 to study Economics.",
+    "I was born in Uruguay, grew up in Spain, spent almost ten years in Sweden, lived again in Uruguay for a while, and eventually moved back to Spain to study Economics.",
   points: [
-    "Before academics became my main focus, tennis was the center of my life. I competed at a high level for many years, and reached ATP Challenger-level competition at 19.",
-    "Alongside my degree in Economics, I have built experience in entrepreneurship, marketing, branding, and design, and I am currently developing my skills in programming.",
-    "Today, I am 24 years old, finishing my Economics degree, and focused on building the next chapter of my life.",
+    "For many years, tennis was the center of everything. I competed internationally from a young age and reached ATP Challenger-level competition at 19. Tennis shaped the way I approach life today: with discipline, patience, resilience, and a constant desire to improve.",
+    "Over time, my interests started to expand beyond the court. While studying Economics, I became more involved in product, marketing, and finance.",
+    "Today, I'm finishing my Economics degree and thinking seriously about the next step. I'm especially interested in the sports industry, in roles that connect athletes, product, and performance.",
+    "What motivates me most is the possibility of combining what I lived as an athlete with the analytical side I've developed through Economics, and using both to work on products, experiences, and projects that actually matter to athletes and consumers."
   ],
 };
 
@@ -53,16 +54,14 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    role: "Tax Consultant Intern",
-    company: "Marosa VAT",
+    role: "Consultant Intern",
+    company: "Marosa",
     companyUrl: "https://marosavat.com/",
     period: "FEB 2026 → JUN 2026",
     location: "Onsite (Vigo, SP)",
     type: "onsite",
     highlights: [
-      "Managing VAT compliance for companies across Europe in multi-jurisdiction, deadline-driven environments.",
-      "Working across VAT returns, annual VAT filings, ledgers, SAFT and Intrastat reporting, while maintaining daily communication with clients by phone, email and chat.",
-      "The role has strengthened my Excel skills, attention to detail, and ability to stay calm and accurate under pressure, especially when key information arrives close to filing deadlines.",
+      "Support clients managing day-to-day communication through email, calls, and meetings. Help resolve client questions, coordinate with internal and external stakeholders, and maintain and organized, high-quality client experience. ",
     ],
   },
   {
@@ -73,10 +72,7 @@ export const experiences: Experience[] = [
     location: "Onsite (Vigo, SP)",
     type: "onsite",
     highlights: [
-      "Developed strategic projects aimed at expanding the Foundation's presence beyond Vigo and across Galicia.",
-      "Supported initiatives designed to increase fundraising capacity and strengthen long-term growth.",
-      "Gained insight into how a foundation operates, and how its objectives and structure differ from those of a traditional business.",
-      "Contributed from a consulting perspective to branding and marketing, helping improve communication and positioning."
+      "One month internship where I supported financial and strategic analysis for a sports foundation, using Excel to organize data and build reports. Evaluated opportunities to increase revenue, improve structure, and support long-term sustainability. "
     ],
   },
   {
@@ -87,24 +83,17 @@ export const experiences: Experience[] = [
     location: "Onsite (Vigo, SP)",
     type: "onsite",
     highlights: [
-      "Building a platform that connects racket sports professionals with job opportunities.",
-      "Leading NET from a CEO and CMO perspective, with responsibility across branding, product strategy, finance and overall business direction.",
-      "Leading the visual identity and UX/UI of the product, while also driving market research and product strategy",
-      "Using NET to stay sharp, keep learning and continue developing across design, product, strategy and entrepreneurship."
+      "Building a side project to connect racket-sports professionals with job opportunities. Using the project to deepen my understanding of product, user & market research, branding, marketing, client relationships, and early-stage product thinking. Spoke with players, coaches and academies to better understand their needs, pain points, and decision-making process. "
     ],
   },
   {
-    role: "Co-Founder & Marketing Manager",
-    company: "Tripnest.io / Skine.no",
+    role: "Marketing & Branding Associate",
+    company: "Tripnest",
     period: "2021 → 2024",
     location: "Remote (Oslo, NO)",
     type: "remote",
     highlights: [
-      "What started as an attempt by two young friends to see if we could build something in that world became a valuable learning experience in marketing and design while studying my Economics degree.",
-      "Worked on two early-stage startups and led work across design, branding, graphics and social media.",
-      "Helped build travel platform (Tripnest) with 1.2M+ listings, focused on a B2B.",
-      "Supported the growth of a B2C beauty comparison platform (Skine) through design, user communication, PR and collaborations with 30+ influencers.",
-      "Both projects were eventually closed for strategic and financial reasons"
+      "Worked across two early-stage projects in travel and e-commerce, supporting marketing strategy, branding, UX/UI design, digital growth and user acquisition. Collaborated with 50+ content creators in Scandinavia, helped develop growth initiatives, and gained hands-on experience translating consumer behaviour, visual identity and market positioning into clearer product and brand decisions."
     ],
   },
   {
@@ -115,10 +104,7 @@ export const experiences: Experience[] = [
     location: "Onsite (Montevideo, UY)",
     type: "onsite",
     highlights: [
-      "Assisted VIP travelers across lounge reception, the members area and bar service.",
-      "Helped receive and guide passengers through migration and security airport",
-      "Worked rotating shifts from 7:00 to 15:00 or from 23:00 to 7:00.",
-      "Supported passengers by phone, email and chat, helping make their travel experience smoother and less stressful."
+      "Delivered customer support across phone, email, and web channels while assisting VIP travellers and international passengers. Built strong habits in service quality, clear communication, fast problem-solving, and attention to detail."
     ],
   },
 ];
@@ -136,25 +122,25 @@ export interface TennisExperience {
 
 export const tennisExperience: TennisExperience[] = [
   {
-    role: "Tennis Coach",
-    company: "Engadin Spirit",
-    companyUrl: "https://stmoritz.gr-mountain.com/",
-    period: "JUL 2024 → AUG 2024 & JUL 2025 → AUG 2025",
-    location: "Onsite (St. Moritz, CH)",
+    role: "Volunteer Assistant Coach",
+    company: "Macalester College Athletics",
+    companyUrl: "https://athletics.macalester.edu/",
+    period: "FALL 2025",
+    location: "Onsite (St. Paul, United States)",
     type: "onsite",
     highlights: [
-      "Provided private coaching in St. Moritz and Silvaplana, working with international clients in prestigious hotels including Kulm Hotel and Badrutt's Palace.",
+      "Supported men's and women's teams through practise organization, on-court feedback, player communication, and team environment support.",
     ],
   },
   {
-    role: "Team Leader",
-    company: "SRNDPTY",
-    companyUrl: "https://srndpty.tennis/",
-    period: "JUL 2022 & JUL 2023",
-    location: "Onsite (Oslo, NO)",
+    role: "Private Tennis Coach",
+    company: "GR Engadin SA",
+    companyUrl: "https://stmoritz.gr-mountain.shop/en/summer/",
+    period: "SUMMERS 2024 & 2025",
+    location: "Onsite (St. Moritz, Switzerland)",
     type: "onsite",
     highlights: [
-      "Provided private coaching in St. Moritz and Silvaplana, working with international clients in prestigious hotels including Kulm Hotel and Badrutt's Palace.",
+      "Coached international clients in premium environments across St. Moritz and Silvaplana, including the Kulm Hotel and Badrutt’s Palace. Adapted communication and training to different levels, expectations, and cultural backgrounds.",
     ],
   },
   {
@@ -163,7 +149,7 @@ export const tennisExperience: TennisExperience[] = [
     companyUrl: "https://www.atptour.com/en/atp-challenger-tour",
     period: "2021",
     highlights: [
-      "Became a professional tennis player at 19, reaching the ATP Challenger in Montevideo. After a series of significant injuries and the financial limits of continuing on tour, I decided to change course and focus on my studies."
+      "Reached ATP Challenger level. Gained first-hand experience in elite competitions, international travel, pressure management, injury setbacks, and the discipline required to keep improving in high-performance environments."
     ],
   },
   {
@@ -214,20 +200,6 @@ export const skillCategories: SkillCategory[] = [
     accent: "neutral",
   },
   {
-    name: "Hard Skills",
-    skills: [
-      "Economics",
-      "Financial Markets",
-      "Marketing",
-      "Branding",
-      "UX/UI",
-      "Graphics",
-      "Design",
-      "VAT Compliance",
-    ],
-    accent: "cyan",
-  },
-  {
     name: "Soft Skills",
     skills: [
       "Resilience",
@@ -235,11 +207,26 @@ export const skillCategories: SkillCategory[] = [
       "Discipline",
       "Purpose-driven ambition",
       "Work Ethic",
-      "Cross-Cultural Communication",
       "Adaptability",
     ],
     accent: "warm",
   },
+  {
+    name: "Skills",
+    skills: [
+      "Professional Athlete Experience",
+      "Economic Analysis",
+      "Cross-Cultural Communication",
+      "Operations",
+      "Workflow Coordination",
+      "Client Experience",
+      "User Research",
+      "Marketing",
+      "Branding",
+    ],
+    accent: "cyan",
+  },
+
 
 ];
 
