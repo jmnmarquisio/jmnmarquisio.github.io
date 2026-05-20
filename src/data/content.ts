@@ -19,7 +19,7 @@ export const about = {
   label: "About Me",
   title: "Hi, Mateo here!",
   intro:
-    "I was born in Uruguay, grew up in Spain, spent almost ten years in Sweden, lived again in Uruguay for a while, and eventually moved back to Spain to study Economics.",
+    "I grew up moving across countries from a very young age. I was born in Uruguay, lived in Spain, then Sweden, moved back to Uruguay, and eventually moved back to Spain to study Economics.",
   points: [
     "For many years, tennis was the center of everything. I competed internationally from a young age and reached ATP Challenger-level competition at 19. Tennis shaped the way I approach life today: with discipline, patience, resilience, and a constant desire to improve.",
     "Over time, my interests started to expand beyond the court. While studying Economics, I became more involved in product, marketing, and finance.",
