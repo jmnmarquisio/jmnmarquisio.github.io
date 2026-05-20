@@ -6,4 +6,4 @@ You can visit the live site at [https://jmnmarquisio.github.io/](https://jmnmarq
 
 ## 🚀 Current Status
 
-Currently, this site primarily serves as my **online resume**. Here you can find information about my professional experience, skills, and projects I've worked on.
+Currently, this site primarily serves as my **online resume**. Here you can find information about my professional experience, skills, and projects I've worked on
