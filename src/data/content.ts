@@ -3,8 +3,8 @@
 
 export const personal = {
   name: "Juan Mateo Núñez Marquisio",
-  title: "Final-year Economics Student",
-  subtitle: "Former ATP Player",
+  title: "Product Analyst",
+  subtitle: "Economics Graduate - Former ATP Player",
   email: "jmn.marquisio@gmail.com",
   phone: "+34 641 74 68 43",
   location: "Vigo, Spain",
@@ -19,25 +19,11 @@ export const about = {
   label: "About Me",
   title: "Hi, Mateo here!",
   intro:
-    "I grew up moving across countries from a very young age. I was born in Uruguay, lived in Spain, then Sweden, moved back to Uruguay, and eventually moved back to Spain to study Economics.",
+    "I grew up moving between countries. I was born in Uruguay, spent much of my childhood in Spain and Sweden, later moved back to Uruguay, and eventually returned to Spain to study Economics.",
   points: [
-    "For many years, tennis was the center of everything. I competed internationally from a young age and reached ATP Challenger-level competition at 19. Tennis shaped the way I approach life today: with discipline, patience, resilience, and a constant desire to improve.",
-    "Over time, my interests started to expand beyond the court. While studying Economics, I became more involved in product, marketing, and finance.",
-    "Today, I'm finishing my Economics degree and thinking seriously about the next step. I'm especially interested in the sports industry, in roles that connect athletes, product, and performance.",
-    "What motivates me most is the possibility of combining what I lived as an athlete with the analytical side I've developed through Economics, and using both to work on products, experiences, and projects that actually matter to athletes and consumers."
-  ],
-};
-
-export const bio = {
-  short: "I am currently completing my Bachelor's degree in Economics and will relocate to the Zurich area in August/September 2026. I am seeking entry-level, internship, or graduate opportunities in banking, finance, or business-related roles, where I can contribute from the start while continuing to learn in a demanding and international environment.",
-  full: [
-    "I am currently completing my Bachelor's degree in Economics and will relocate to the Zurich area in August/September 2026. I am seeking entry-level, internship, or graduate opportunities in banking, finance, or business-related roles, where I can contribute from the start while continuing to learn in a demanding and international environment.",
-    "Before fully focusing on my studies, I competed on the ATP Tour at 19. That experience shaped the way I work: with discipline, consistency, resilience, and the ability to perform under pressure. It also taught me to stay calm, adapt quickly, and take responsibility in demanding situations.",
-    "At 24, I have lived in Uruguay, Spain, and Sweden, and have also spent meaningful time in the United States, Switzerland, and Norway. This international background has given me a broad perspective and a strong ability to adapt. I speak Spanish, English, and Swedish, and I am currently learning German to better integrate into Switzerland.",
-    "Through my degree in Economics, I have built a solid foundation in economics, business, and finance, while also gaining exposure to areas such as marketing, taxation, entrepreneurship, and product development. This broader background has strengthened my analytical thinking and my ability to learn quickly and adapt across different types of work.",
-    "What I bring is resilience, international perspective, analytical ability, and a strong willingness to learn. I am calm, dependable, and easy to work with, while also holding myself to high standards. I value professionalism, clarity, and steady execution.",
-    "Zurich especially appeals to me because of its international outlook, strong business environment, and understated ambition. It is a place whose focus and seriousness align well with the kind of person I am and the kind of environment in which I do my best work.",
-    "I would welcome the opportunity to contribute, grow, and build a strong long-term career.",
+    "For many years, tennis was the center of my life. I competed internationally from a young age and reached ATP Challenger level at 19. Tennis shaped a lot of who I am today: discipline, resilience, patience, and the desire to keep improving.",
+    "Over time, my interests expanded beyond tennis. While studying Economics, I became increasingly interested in product, marketing, finance, and entrepreneurship.",
+    "Today, I'm an Economics graduate working as a Product Analyst at Marosa by Wolters Kluwer."
   ],
 };
 
@@ -53,6 +39,17 @@ export interface Experience {
 }
 
 export const experiences: Experience[] = [
+  {
+    role: "Product Analyst",
+    company: "Marosa by Wolters Kluwer",
+    companyUrl: "https://marosavat.com/",
+    period: "JUL 2026 → PRESENT",
+    location: "Onsite (Vigo, SP)",
+    type: "onsite",
+    highlights: [
+      "As a Product Analyst, I work closely with our core product, VATify, sitting between Compliance, Product, and Development. I help identify and solve day-to-day product issues, support our Product Owner and UX work, and contribute to improving the product. The role also gives me regular exposure to senior leadership, including our CPTO, COO and CEO.",
+    ],
+  },
   {
     role: "Consultant Intern",
     company: "Marosa",
@@ -298,7 +295,6 @@ export const languages = [
   { name: "Spanish", level: "Native" },
   { name: "Swedish", level: "Native" },
   { name: "English", level: "Professional Proficiency" },
-  { name: "German", level: "Elementary (A1)" },
 ];
 
 export const interests = {

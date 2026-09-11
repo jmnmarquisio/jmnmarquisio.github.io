@@ -226,32 +226,6 @@ import LanguageIcon from "../icons/Language.astro";
                 }
               </div>
             </div>
-
-            <div>
-              <p class="text-label mb-5 pb-2 border-b border-border">
-                Learning
-              </p>
-              <div class="space-y-5">
-                {
-                  languages
-                    .filter(
-                      (lang) =>
-                        lang.level !== "Native" &&
-                        lang.level !== "Professional Proficiency",
-                    )
-                    .map((lang) => (
-                      <div>
-                        <p class="text-body text-primary font-medium">
-                          {lang.name}
-                        </p>
-                        <p class="text-body-sm text-secondary mt-1">
-                          {lang.level}
-                        </p>
-                      </div>
-                    ))
-                }
-              </div>
-            </div>
           </div>
         </div>
 
